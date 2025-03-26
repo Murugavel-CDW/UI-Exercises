@@ -8,15 +8,37 @@
 <body>
     <header>
         <h1 align="center">SITBACK FURNITURE</h1>
+        <!-- Actual nav content structure -->
         <!-- <nav bgcolor="black">
-            <ul>
+            <ul type="none">
                 <li>COUCHES</li>
                 <li>CHAIRS</li>
                 <li>DINING</li>
             </ul>
         </nav> -->
-        <table>
-            
+
+        <!-- Table to bring out the exact layout -->
+        <table bgcolor="grey" width="100%" height="60px">
+            <tr>
+                <td>
+                   <div align="center">
+                        <span>
+                            COUCHES
+                        </span>
+                        &nbsp; &nbsp;
+                        
+                        <span>
+                            CHAIRS
+                        </span>
+                        &nbsp; &nbsp;
+                        
+                        <span>
+                            DINING
+                        </span>
+                        &nbsp; &nbsp;
+                   </div> 
+                </td>
+            </tr>
         </table>
     </header>
 
@@ -24,23 +46,64 @@
         <h2 align="center">Your Home, With Love</h2>
         <h3 align="center">Choose from a zillion collections</h3>
 
-        <div>
-            <img src="/Exercise1/src/assets/images/couches.png" alt="Couches" />
-            <img src="/Exercise1/src/assets/images/chairs.png" alt="Chairs" />
-            <img src="/Exercise1/src/assets/images/dining.png" alt="Dining" />
+         <!-- Images list -->
+        <div align="center">
+            <img src="/Exercise1/src/assets/images/couches.png" alt="Couches" /> &nbsp;
+            <img src="/Exercise1/src/assets/images/chairs.png" alt="Chairs" /> &nbsp;
+            <img src="/Exercise1/src/assets/images/dining.png" alt="Dining" /> &nbsp;
         </div>
 
         <section align="center">
             <h2>Our Products, Our Pride</h2>
             <p>
                 Furniture is a big deal in the design industry. A well
-                executed concept can result in a timeless piece of furntiture
-                that never goes out of style. "Furniture builds up over
+                executed concept can result <br/> in a timeless piece of furntiture
+                that never goes out of style. "Furniture builds <br/> up over
                 time - the more the furntiture recorder traces of the 
-                owner's whereabouts and lifestyle, the more it will increase
+                owner's whereabouts <br/> and lifestyle, the more it will increase
                 it's value for the owner", says Johansen
             </p>
-            <a href="https://www.google.com">Take me to Google</a>
+            <a href="https://www.google.com" target="_blank">Take me to Google</a>
+        </section>
+
+        <section align="center">
+            <h2>Contact Us</h2>
+            <!-- Form -->
+            <form action="">
+                <div>
+                    <input type="text" name="name" id="name" placeholder="Your name">
+                </div>
+                <br/>
+
+                <div>
+                    <input type="tel" name="contact number" id="contact-number" placeholder="Contact number">
+                </div>
+                <br/>
+
+                <div>
+                    <input type="email" name="email" id="email" placeholder="Email Address">
+                </div>
+                <br/>
+
+                <div>
+                    <input type="email" name="email" id="email" placeholder="Email Address">
+                </div>
+                <br/>
+
+                <div>
+                    <input type="text" name="year" id="year" placeholder="Year of Birth">
+                </div>
+                <br/>
+
+                <div>
+                    <select name="state" id="state">
+                        <option value="">State</option>
+                        <option value="tamilnadu">Tamilnadu</option>
+                        <option value="kerala">Kerala</option>
+                        <option value="odisha">Odisha</option>
+                    </select>
+                </div>
+            </form>
         </section>
     </main>
 </body>
