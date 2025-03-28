@@ -1,0 +1,47 @@
+:root{
+    --primary-color: #43133e;
+    --secondary-color: white;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Header section */
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #43133e;
+    height: 10vh;
+}
+
+.header-title{
+    color: #ffffff;
+    font-family: sans-serif;
+}
+
+/* Main section */
+
+.cover>img, .collage-card>img{
+    width: 100%;
+}
+
+.collage{
+    margin: 4rem;
+}
+
+.collage-card{
+    display: inline-block;
+    width: 29rem;
+    height: auto;
+    padding: auto;
+    margin: 2rem;
+}
+
+.collage-card-title{
+
+}
