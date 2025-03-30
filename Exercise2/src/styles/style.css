@@ -1,5 +1,6 @@
 :root{
-    --primary-color: #43133e;
+    --magneto: #43133e;
+    --primary-color: #7a1655;
     --secondary-color: white;
 }
 
@@ -15,12 +16,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #43133e;
-    height: 10vh;
+    background-color: var(--magneto);
+    height: 12vh;
 }
 
 .header-title{
-    color: #ffffff;
+    color: var(--secondary-color);
     font-family: sans-serif;
 }
 
@@ -31,17 +32,60 @@
 }
 
 .collage{
-    margin: 4rem;
+    margin: 6rem;
 }
 
 .collage-card{
     display: inline-block;
-    width: 29rem;
+    width: 29.8rem;
     height: auto;
-    padding: auto;
-    margin: 2rem;
+    margin: 1rem;
 }
 
 .collage-card-title{
+    margin: 11px auto;
+    font-family: "Open Sans", sans-serif;
+    line-height: 45px;
+    font-weight: 300;
+    font-size: 35px;
+}
 
+.collage-card-place{
+    font-family: "Work Sans", sans-serif;
+}
+
+.collage-card-description{
+    font-family: "IBM Plex Sans", sans-serif;
+    margin-top: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+.collage-card-button{
+    margin-bottom: 2rem;
+    padding: 0.5rem 1.3rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+}
+
+.collage-card-button:hover{
+    text-decoration: underline;
+}
+
+/* Footer */
+
+.footer{
+    height: 9vh;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1.3rem 5rem;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+.footer-copyrights{
+    font-size: 18px;
+}
+
+.footer-info{
+    font-weight: 300;
 }
