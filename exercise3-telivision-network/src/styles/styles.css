@@ -3,6 +3,7 @@
 :root{
     --primary-color: #145f94;
     --secondary-color: #ffff;
+    --card-bg-color: #f6f6f6;
 }
 
 /* Global styles(Resetting) */
@@ -33,19 +34,21 @@ body{
 /* Main section */
 
 .main{
-    margin: 1.8rem 7.8rem 6rem 7.8rem;
+    margin: 1.8rem 8.4rem 6rem 8.4rem;
 }
 
 /* Card section */
 
 .card{
     border: 1px solid var(--primary-color);
+    background-color: var(--card-bg-color);
     margin: 0.6rem;
 }
 
 .card-header{
     padding: 0.9rem 1.6rem;
     height: 3.3rem;
+    font-weight: 500;
     font-size: 21px;
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -53,20 +56,21 @@ body{
 
 .card-description{
     padding: 1.6rem;
-    font-size: 17.5px;
-    line-height: 26px;
+    font-size: 18px;
+    font-weight: 380;
+    line-height: 27px;
     text-align: justify;
 }
 
 /* Floating properties */
 
 .left{
-    width: 59.4%;
+    width: 60.1%;
     float: left;
 }
 
 .right{
-    width: 38%;
+    width: 37.1%;
     float: right;
 }
 
