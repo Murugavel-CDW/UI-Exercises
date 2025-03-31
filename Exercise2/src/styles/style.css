@@ -1,7 +1,7 @@
 :root{
     --magneto: #43133e;
     --primary-color: #7a1655;
-    --secondary-color: white;
+    --secondary-color: #ffffff;
 }
 
 *{
@@ -10,29 +10,51 @@
     box-sizing: border-box;
 }
 
+/* Font styles */
+
+.text-Open_Sans{
+    font-family: "Open Sans", sans-serif;
+}
+
+.text-Work_Sans{
+    font-family: "Work Sans", sans-serif;
+}
+
+.text-IBM_Plex_Sans{
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+/* Width styles */
+
+.width-100{
+    width: 100%;
+}
+
 /* Header section */
+
+.cover-image{
+    height: 63rem;
+}
 
 .header{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--magneto);
-    height: 12vh;
+    height: 9.5rem;
 }
 
 .header-title{
     color: var(--secondary-color);
-    font-family: sans-serif;
+    font-size: 2.5rem;
 }
 
 /* Main section */
 
-.cover>img, .collage-card>img{
-    width: 100%;
-}
+ /* Collage */
 
 .collage{
-    margin: 6rem;
+    margin: 4.5rem 6rem 3rem;
 }
 
 .collage-card{
@@ -44,48 +66,68 @@
 
 .collage-card-title{
     margin: 11px auto;
-    font-family: "Open Sans", sans-serif;
     line-height: 45px;
     font-weight: 300;
     font-size: 35px;
 }
 
 .collage-card-place{
-    font-family: "Work Sans", sans-serif;
+    font-size: 19px;
 }
 
 .collage-card-description{
-    font-family: "IBM Plex Sans", sans-serif;
     margin-top: 1.7rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    font-size: 19px;
 }
 
 .collage-card-button{
-    margin-bottom: 2rem;
-    padding: 0.5rem 1.3rem;
+    margin-bottom: 3.2rem;
+    padding: 1rem 1.7rem;
+    font-size: 17px;
     background-color: var(--primary-color);
     color: var(--secondary-color);
     border: none;
 }
 
 .collage-card-button:hover{
-    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Info Section */
+
+.info{
+    margin: 3rem 13.5rem 4rem 13.5rem;
+}
+
+.info-header{
+    text-align: center;
+    font-size: 70px;
+    font-weight: 300;
+    color: var(--primary-color);
+    margin-bottom: 2.3rem;
+}
+
+.info-text{
+    font-size: 29px;
+    line-height: 50px;
+    font-weight: 300;
 }
 
 /* Footer */
 
 .footer{
-    height: 9vh;
+    height: 6.9rem;
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    padding: 1.3rem 5rem;
-    font-family: "IBM Plex Sans", sans-serif;
+    padding: 2rem 7rem;
 }
 
 .footer-copyrights{
-    font-size: 18px;
+    font-size: 23px;
 }
 
 .footer-info{
+    font-size: 20px;
     font-weight: 300;
 }
