@@ -1,0 +1,74 @@
+/* Variables */
+
+:root{
+    --primary-color: #145f94;
+    --secondary-color: #ffff;
+}
+
+/* Global styles(Resetting) */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Font styles */
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+/* Header section */
+
+.header{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    height: 5.4rem;
+}
+
+/* Main section */
+
+.main{
+    margin: 1.8rem 7.8rem 6rem 7.8rem;
+}
+
+/* Card section */
+
+.card{
+    border: 1px solid var(--primary-color);
+    margin: 0.6rem;
+}
+
+.card-header{
+    padding: 0.9rem 1.6rem;
+    height: 3.3rem;
+    font-size: 21px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.card-description{
+    padding: 1.6rem;
+    font-size: 17.5px;
+    line-height: 26px;
+}
+
+/* Floating properties */
+
+.left{
+    width: 59.4%;
+    float: left;
+}
+
+.right{
+    width: 38%;
+    float: right;
+}
+
+.clear{
+    clear: both;
+}
