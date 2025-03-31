@@ -55,6 +55,7 @@ body{
     padding: 1.6rem;
     font-size: 17.5px;
     line-height: 26px;
+    text-align: justify;
 }
 
 /* Floating properties */
