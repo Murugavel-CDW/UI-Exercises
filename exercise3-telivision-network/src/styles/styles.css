@@ -43,6 +43,7 @@ body{
     border: 1px solid var(--primary-color);
     background-color: var(--card-bg-color);
     margin: 0.6rem;
+    /* display: inline-block; */
 }
 
 .card-header{
@@ -65,15 +66,24 @@ body{
 /* Floating properties */
 
 .left{
-    width: 60.1%;
     float: left;
+
 }
 
 .right{
-    width: 37.1%;
     float: right;
 }
 
-.clear{
+.small-card{
+    width: 37.1%;
+}
+
+.big-card{
+    width: 60.1%;
+}
+
+.main::after{
+    content: "";
+    display: block;
     clear: both;
 }
