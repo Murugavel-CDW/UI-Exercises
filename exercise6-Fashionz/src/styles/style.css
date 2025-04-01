@@ -1,0 +1,190 @@
+/* Global variables */
+
+:root{
+    --primary-color: #2a2b30;
+    --secondary-color: #aaaaaa;
+    --profile-background: #d8d8d8;
+    --card-background: #24252a;
+    --white: #ffff;
+    --light-green: #87b181;
+    --black: #000000;
+}
+
+/* Resetting styles */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Font styles */
+
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.text-medium{
+    font-size: 1.5rem;
+}
+
+/* Header section beginning */
+
+.header{
+    margin: 4.8rem 8rem 0rem 8rem;
+    position: relative;
+}
+
+.header-logo{
+    width: 12rem;
+}
+
+.header-profile_icon{
+    position: absolute;
+    top: -10px;
+    right: -25px;
+    height: 4.1rem;
+    width: 4.1rem;
+    background-color: var(--profile-background);
+    border-radius: 50%;
+}
+
+.header-options{
+    position: absolute;
+    right: -26px;
+    top: 70px;
+    width: 16.2rem;
+    height: 11.3rem;
+    background-color: var(--white);
+    color: var(--black);
+    z-index: 100;
+}
+
+.header-options-text{
+    margin: 1.3rem 1.5rem;
+    font-weight: bold;
+}
+
+/* Header section ending */
+
+/* Main section beginning */
+
+.main{
+    margin: 1.5rem 6.5rem 6.5rem 6.5rem;
+}
+
+/* Item card beginning */
+
+.item{
+    display: inline-block;
+    margin: 1.5rem;
+}
+
+.item-info{
+    background-color: var(--card-background);
+    display: grid;
+    place-items: center;
+    height: 26rem;
+    width: 20.5rem;
+    position: relative;
+}
+
+.item-image{
+    width: 11rem;
+}
+
+.extra-size{
+    width: 16rem;
+}
+
+.item-wishlist_icon{
+    color: var(--light-green);
+    font-size: 1.3rem;
+    position: absolute;
+    top: 22px;
+    right: 22px;
+}
+
+.item-size{
+    height: 3.7rem;
+    width: 3.7rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background-color: var(--light-green);
+    color: var(--black);
+    font-weight: 500;
+    position: absolute;
+    bottom: -29px;
+    right: 22px;
+}
+
+.item-name_price_container{
+    margin: 1rem 0;
+}
+
+.item-name{
+    font-weight: 250;
+    margin-bottom: 0.5rem;
+}
+
+.item-price, .item-cart_button{
+    color: var(--secondary-color);
+}
+
+.item-price{
+    font-weight: 200;
+}
+
+.item-cart_button{
+    padding: 0.7rem 1.1rem;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+}
+
+/* Item card ending */
+
+/* Main section ending */
+
+/* Footer section beginning */
+
+.footer{
+    background-color: var(--black);
+    color: var(--white);
+    height: 7rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer-nav-list{
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-nav-item{
+    padding: 0 3.1rem;
+    font-size: 1.5rem;
+}
+
+
+/* Footer section ending */
+
+/* Pseudo class styles */
+
+.header-profile_icon:hover, .item-cart_button{
+    cursor: pointer;
+}
+
+.header-options-text:hover, .footer-nav-item:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
