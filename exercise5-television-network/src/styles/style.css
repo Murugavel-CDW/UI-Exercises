@@ -1,0 +1,111 @@
+/* Variables */
+
+:root{
+    --primary-color: #145f94;
+    --secondary-color: #ffff;
+    --card-bg-color: #f6f6f6;
+}
+
+/* Global styles(Resetting) */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Font styles */
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+/* Header section */
+
+.header{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    height: 5.4rem;
+}
+
+/* Main section */
+
+.main{
+    margin: 1.8rem 8.4rem 6rem 8.4rem;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
+/* Card section */
+
+.card{
+    border: 1px solid var(--primary-color);
+    background-color: var(--card-bg-color);
+    margin: 0.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-header{
+    padding: 0.9rem 1.6rem;
+    height: 3.3rem;
+    font-weight: 500;
+    font-size: 21px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.card-description{
+    padding: 1.6rem;
+    font-size: 18px;
+    font-weight: 380;
+    line-height: 27px;
+    text-align: justify;
+}
+
+/* media queries */
+
+@media (max-width: 425px){
+    .header{
+        font-size: 9px;
+        height: 3rem;
+    }
+
+    .main{
+        margin: 1.5rem
+    }
+
+    .card-header{
+        font-size: 10px;
+        height: 1.4rem;
+        padding: 0.3rem 0.8rem;
+    }
+
+    .card-description{
+        font-size: 9px;
+        padding: 0.8rem;
+        line-height: 14px;
+    }
+}
+
+@media (min-width: 426px){
+    .left{
+        float: left;
+        width: 56.1rem;
+    }
+    
+    .right{
+        float: right;
+        width: 35rem;
+    }
+    
+    .main::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
