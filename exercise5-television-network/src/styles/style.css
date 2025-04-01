@@ -19,7 +19,7 @@ body{
     font-family: "Roboto", sans-serif;
 }
 
-/* Header section */
+/* Header section beginning */
 
 .header{
     background-color: var(--primary-color);
@@ -31,7 +31,9 @@ body{
     height: 5.4rem;
 }
 
-/* Main section */
+/* Header section ending */
+
+/* Main section beginning */
 
 .main{
     margin: 1.8rem 8.4rem 6rem 8.4rem;
@@ -41,7 +43,9 @@ body{
     display: inline-block;
 }
 
-/* Card section */
+/* Main section ending */
+
+/* Card section beginning */
 
 .card{
     border: 1px solid var(--primary-color);
@@ -67,9 +71,11 @@ body{
     text-align: justify;
 }
 
+/* Card section ending */
+
 /* media queries */
 
-@media (max-width: 425px){
+@media (max-width: 768px){
     .header{
         font-size: 9px;
         height: 3rem;
@@ -92,7 +98,7 @@ body{
     }
 }
 
-@media (min-width: 426px){
+@media (min-width: 1024px){
     .left{
         float: left;
         width: 56.1rem;
