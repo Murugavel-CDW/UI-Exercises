@@ -1,0 +1,77 @@
+/* Global variables */
+
+:root{
+    --black: #000;
+    --white: #fff;
+    --blue: #4b90e2;
+    --green: #b8e986;
+}
+
+/* Resetting default styles */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Font styles */
+
+.text-medium{
+    font-size: 3.6rem;
+    font-weight: 350;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.highlight-blue{
+    color: var(--blue);
+}
+
+/* Header section beginning */
+
+.header{
+    margin: 4.3rem 11rem;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.email{
+    font-size: 1.6rem;
+}
+
+/* Header section ending */
+
+/* Main section beginning */
+
+.main{
+    margin: 5rem 6rem;
+}
+
+.profile_info{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2.8rem 13rem;
+}
+
+.profile_info-name{
+    font-size: 10.9rem;
+    font-weight: 300;
+}
+
+.product-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-list-item{
+    width: 26.9rem;
+    margin: 1.1rem;
+}
+
+/* Main section ending */
