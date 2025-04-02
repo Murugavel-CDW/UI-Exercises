@@ -17,11 +17,6 @@
 
 /* Font styles */
 
-.text-medium{
-    font-size: 3.6rem;
-    font-weight: 350;
-}
-
 body{
     font-family: "Roboto", sans-serif;
     background-color: var(--black);
@@ -32,10 +27,14 @@ body{
     color: var(--blue);
 }
 
+.highlight-green{
+    color: var(--green);
+}
+
 /* Header section beginning */
 
 .header{
-    margin: 4.3rem 11rem;
+    margin: 4.3rem 11.3rem;
     display: flex;
     flex-direction: row-reverse;
 }
@@ -49,14 +48,13 @@ body{
 /* Main section beginning */
 
 .main{
-    margin: 5rem 6rem;
+    margin: 7.7rem 9.9rem;
 }
 
 .profile_info{
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 2.8rem 13rem;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profile_info-name{
@@ -64,14 +62,48 @@ body{
     font-weight: 300;
 }
 
+.profile_info-tech{
+    font-size: 3.3rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+}
+
+/* Product card beginning */
+
+/* Product card ending */
+
 .product-list{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    margin: 8.8rem 0 8.3rem 0;
 }
 
 .product-list-item{
     width: 26.9rem;
-    margin: 1.1rem;
+    margin: 1.2rem;
+}
+
+.logos-section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logos-section-header{
+    font-size: 2.9rem;
+}
+
+.logos-section-list{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 6rem 0 8rem 0;
+}
+
+.logos-section-list-item{
+    width: 7rem;
+    height: 5rem;
 }
 
 /* Main section ending */
