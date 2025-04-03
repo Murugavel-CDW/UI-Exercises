@@ -23,8 +23,8 @@
 
 body{
     font-family: "Roboto", sans-serif;
-    /* background-color: var(--primary-color); */
-    /* color: var(--white); */
+    background-color: var(--primary-color);
+    color: var(--white);
 }
 
 .text-medium{
@@ -86,50 +86,52 @@ body{
 /* Main section beginning */
 
 .main{
-    margin: 1.56rem 4.5rem 6.5rem 7.4rem;
-    padding-right: 0.5rem;
+    margin: 1.46rem 0 9rem 7.44rem;
+    /* padding-right: 0.5rem; */
 }
 
 /* Item card beginning */
 
 .item{
     display: inline-block;
-    margin: 1.5rem;
+    margin: 1.8rem 1.48rem 1.73rem 1.48rem;
 }
 
 .item-info{
     background-color: var(--card-background);
     display: grid;
     place-items: center;
-    height: 26rem;
-    width: 20.45rem;
+    height: 25.73rem;
+    width: 20.4rem;
     position: relative;
 }
 
-.item-image-container{
-    padding-top: 0.5rem;
-    padding-right: 0.3rem;
-}
-
 .wardrobe-image-container{
-    width: 11.7rem;
-    height: 15.5rem;
-    /* object-fit: fill; */
+    width: 11.27rem;
+    height: 15rem;
+    margin-top: 0.7rem;
+    margin-right: 0.4rem;
 }
 
 .jacket-image-container{
-    width: 11.4rem;
-    height: 15.9rem;
+    width: 11.3rem;
+    height: 15.6rem;
+    margin-top: 0.7rem;
+    margin-right: 0.6rem;
 }
 
 .round_neck-image-container{
-    width: 15.2rem;
-    height: 15.9rem;
+    width: 15.3rem;
+    height: 15.1rem;
+    margin-top: 0.4rem;
+    margin-right: 0.4rem;
 }
 
 .shirt-image-container{
-    width: 14rem;
-    height: 16.3rem;
+    width: 14.15rem;
+    height: 15.8rem;
+    margin-top: 0.8rem;
+    margin-right: 0.6rem;
 }
 
 .item-image{
@@ -141,32 +143,37 @@ body{
     color: var(--light-green);
     font-size: 1.3rem;
     position: absolute;
-    top: 22px;
+    top: 21.5px;
     right: 22px;
 }
 
 .item-size{
-    height: 3.7rem;
-    width: 3.7rem;
+    height: 3.55rem;
+    width: 3.55rem;
     border-radius: 50%;
     display: grid;
     place-items: center;
     background-color: var(--light-green);
     color: var(--black);
-    font-weight: 500;
     position: absolute;
-    bottom: -29px;
-    right: 22px;
+    bottom: -28px;
+    right: 23px;
+}
+
+.item-size-text{
+    font-weight: 650;
+    padding-top: 0.2rem;
 }
 
 .item-name_price_container{
-    margin-top: 0.8rem;
-    margin-bottom: 0.65rem;
+    margin-top: 1rem;
+    margin-bottom: 0.87rem;
 }
 
 .item-name{
     font-weight: 300;
-    margin-bottom: 0.3rem;
+    font-size: 1.51rem;
+    margin-bottom: 0.2rem;
 }
 
 .item-price, .item-cart_button{
@@ -174,13 +181,15 @@ body{
 }
 
 .item-price{
-    font-weight: 350;
-    font-size: 1.39rem;
+    font-weight: 310;
+    font-size: 1.3rem;
 }
 
 .item-cart_button{
-    padding: 0.7rem 1.15rem;
+    padding: 0.6rem 1.3rem;
     font-size: 1rem;
+    font-weight: bold;
+    font-family: "Quicksand", sans-serif;
     background-color: transparent;
     border: 1px solid var(--secondary-color);
 }
