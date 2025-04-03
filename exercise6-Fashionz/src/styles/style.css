@@ -5,6 +5,7 @@
     --secondary-color: #aaaaaa;
     --profile-background: #d8d8d8;
     --card-background: #24252a;
+    --options-background: #eeeeee;
     --white: #ffff;
     --light-green: #87b181;
     --black: #000000;
@@ -22,8 +23,8 @@
 
 body{
     font-family: "Roboto", sans-serif;
-    background-color: var(--primary-color);
-    color: var(--white);
+    /* background-color: var(--primary-color); */
+    /* color: var(--white); */
 }
 
 .text-medium{
@@ -33,38 +34,51 @@ body{
 /* Header section beginning */
 
 .header{
-    margin: 4.8rem 8rem 0rem 8rem;
+    margin: 4.85rem 8.25rem 0rem 8.25rem;
+    padding: 0 0.7rem;
     position: relative;
 }
 
 .header-logo{
-    width: 12rem;
+    width: 11.75rem;
+    height: 4.3rem;
 }
 
 .header-profile_icon{
     position: absolute;
-    top: -10px;
-    right: -25px;
-    height: 4.1rem;
-    width: 4.1rem;
+    top: -12px;
+    right: -15px;
+    height: 4.2rem;
+    width: 4.2rem;
     background-color: var(--profile-background);
     border-radius: 50%;
 }
 
 .header-options{
+    display: block;
     position: absolute;
-    right: -26px;
-    top: 70px;
-    width: 16.2rem;
-    height: 11.3rem;
-    background-color: var(--white);
+    list-style: none;
+    opacity: 1;
+    right: 1px;
+    top: 83.5px;
+    width: 16.25rem;
+    height: 11.19rem;
+    background-color: var(--options-background);
     color: var(--black);
     z-index: 100;
+    padding-top: 1.63rem;
+    /* padding-bottom: 1rem; */
 }
 
 .header-options-text{
-    margin: 1.3rem 1.5rem;
-    font-weight: bold;
+    margin-bottom: 1.12rem;
+    margin-left: 1.65rem;
+    font-size: 1.04rem;
+    font-weight: 600;
+}
+
+.header-options-text:last-child{
+    margin-bottom: 0;
 }
 
 /* Header section ending */
@@ -72,7 +86,8 @@ body{
 /* Main section beginning */
 
 .main{
-    margin: 1.5rem 6.5rem 6.5rem 6.5rem;
+    margin: 1.56rem 4.5rem 6.5rem 7.4rem;
+    padding-right: 0.5rem;
 }
 
 /* Item card beginning */
@@ -87,16 +102,39 @@ body{
     display: grid;
     place-items: center;
     height: 26rem;
-    width: 20.5rem;
+    width: 20.45rem;
     position: relative;
 }
 
-.item-image{
-    width: 11rem;
+.item-image-container{
+    padding-top: 0.5rem;
+    padding-right: 0.3rem;
 }
 
-.extra-size{
-    width: 16rem;
+.wardrobe-image-container{
+    width: 11.7rem;
+    height: 15.5rem;
+    /* object-fit: fill; */
+}
+
+.jacket-image-container{
+    width: 11.4rem;
+    height: 15.9rem;
+}
+
+.round_neck-image-container{
+    width: 15.2rem;
+    height: 15.9rem;
+}
+
+.shirt-image-container{
+    width: 14rem;
+    height: 16.3rem;
+}
+
+.item-image{
+    width: 100%;
+    height: 100%;
 }
 
 .item-wishlist_icon{
@@ -122,12 +160,13 @@ body{
 }
 
 .item-name_price_container{
-    margin: 1rem 0;
+    margin-top: 0.8rem;
+    margin-bottom: 0.65rem;
 }
 
 .item-name{
-    font-weight: 250;
-    margin-bottom: 0.5rem;
+    font-weight: 300;
+    margin-bottom: 0.3rem;
 }
 
 .item-price, .item-cart_button{
@@ -135,11 +174,12 @@ body{
 }
 
 .item-price{
-    font-weight: 200;
+    font-weight: 350;
+    font-size: 1.39rem;
 }
 
 .item-cart_button{
-    padding: 0.7rem 1.1rem;
+    padding: 0.7rem 1.15rem;
     font-size: 1rem;
     background-color: transparent;
     border: 1px solid var(--secondary-color);
@@ -164,15 +204,15 @@ body{
     list-style: none;
     width: 50%;
     height: 100%;
+    padding: 0 5.9rem;
     margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .footer-nav-item{
-    padding: 0 3.1rem;
+    display: inline-block;
     font-size: 1.5rem;
+    margin: 0 1.75rem;
+    line-height: 112px;
 }
 
 
@@ -184,7 +224,23 @@ body{
     cursor: pointer;
 }
 
-.header-options-text:hover, .footer-nav-item:hover{
+/* .header-options:hover{
+    display: block;
+    position: absolute;
+    list-style: none;
+    opacity: 1;
+    right: 0px;
+    top: 82px;
+    width: 16.2rem;
+    height: 11.3rem;
+    background-color: var(--white);
+    color: var(--black);
+    z-index: 100;
+    padding-top: 1.79rem;
+    padding-bottom: 1rem;
+} */
+
+.footer-nav-item:hover{
     cursor: pointer;
     text-decoration: underline;
 }
