@@ -49,6 +49,7 @@ body{
 
 .main{
     margin: 7.7rem 9.9rem;
+    margin-bottom: 9.3rem;
 }
 
 .profile_info{
@@ -76,12 +77,12 @@ body{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 8.8rem 0 8.3rem 0;
+    margin: 8.85rem 0 8.35rem 0;
 }
 
 .product-list-item{
-    width: 26.9rem;
-    margin: 1.2rem;
+    width: 27rem;
+    margin: 1.1rem;
 }
 
 .logos-section{
@@ -98,12 +99,75 @@ body{
     width: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     margin: 6rem 0 8rem 0;
 }
 
-.logos-section-list-item{
-    width: 7rem;
-    height: 5rem;
+.logos-section-list-spotify-image{
+    width: 9.18rem;
+    height: 2.9rem;
+}
+
+.logos-section-list-adidas-image{
+    width: 5.7rem;
+    height: 5.5rem;
+}
+
+.logos-section-list-audi-image{
+    width: 8rem;
+    height: 2.83rem;
+}
+
+.logos-section-list-lufthansa-image{
+    width: 9.9rem;
+    height: 1.8rem;
+}
+
+.logos-section-list-ikea-image{
+    width: 9rem;
+    height: 3.1rem;
+}
+
+.logos-section-list-montblanc-image{
+    width: 7.25rem;
+    height: 4.3rem;
 }
 
 /* Main section ending */
+
+/* Footer section beginning */
+
+.footer{
+    margin-top: 16.38rem;
+    margin-bottom: 9.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-social-list{
+    display: flex;
+    margin-bottom: 5rem;
+}
+
+.footer-social-icon-container{
+    margin: 0.58rem;
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.2px solid var(--white);
+}
+
+.footer-social-icon{
+    font-size: 1.63rem;
+}
+
+.footer-text{
+    font-size: 1.36rem;
+    font-weight: 500;
+}
+
+ /* Footer section ending */
