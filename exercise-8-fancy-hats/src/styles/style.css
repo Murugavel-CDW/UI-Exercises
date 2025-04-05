@@ -1,0 +1,34 @@
+/* Global variables */
+
+:root{
+    --black: #000;
+    --white: #fff;
+}
+
+/* Resetting default styles */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Body background image */
+
+body{
+    background: no-repeat url("../assets/images/background-image.png");
+    background-size: cover;
+    color: var(--white);
+}
+
+/* Overlay styles */
+
+.overlay{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: -1;
+}
