@@ -30,26 +30,16 @@ body{
 .highlight-green{
     color: var(--green);
 }
-
-/* Header section beginning */
-
-.header{
-    margin: 4.3rem 11.3rem;
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-.email-desktop{
-    font-size: 1.6rem;
-}
-
-/* Header section ending */
-
 /* Main section beginning */
 
 .main{
-    margin: 7.7rem 9.9rem;
-    margin-bottom: 9.3rem;
+    margin: 4.3rem 9.9rem 17.7rem;
+}
+
+.email-desktop{
+    align-self: flex-end;
+    font-size: 1.6rem;
+    margin-bottom: 7.8rem;
 }
 
 .profile-info{
@@ -110,50 +100,68 @@ body{
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 6rem;
-    margin-bottom: 8rem;
+    margin-top: 5.08rem;
+}
+
+.logos-section-list-container{
+    width: 9.93rem;
+    margin: 1rem;
 }
 
 .logos-section-list-spotify-image-container{
-    width: 9.18rem;
-    height: 2.9rem;
+    height: 2.78rem;
 }
 
 .logos-section-list-adidas-image-container{
-    width: 5.7rem;
-    height: 5.5rem;
+    height: 5.4rem;
 }
 
 .logos-section-list-audi-image-container{
-    width: 8rem;
-    height: 2.83rem;
+    height: 2.8rem;
 }
 
 .logos-section-list-lufthansa-image-container{
-    width: 9.9rem;
-    height: 1.8rem;
+    height: 1.86rem;
 }
 
 .logos-section-list-ikea-image-container{
-    width: 9rem;
-    height: 3.1rem;
+    height: 3.09rem;
 }
 
 .logos-section-list-montblanc-image-container{
-    width: 7.25rem;
-    height: 4.3rem;
+    height: 4.25rem;
 }
 
 .logos-section-list-image{
     width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 /* Main section ending */
 
+.header-footer-divider-container{
+    display: flex;
+    justify-content: center;
+}
+
+.header-footer-divider-container > div{
+    border: 0.9px solid var(--white);
+}
+
+.header-footer-divider-small{
+    width: 2.1rem;
+    margin-right: 2.38rem;
+}
+
+.header-footer-divider-large{
+    width: 14rem;
+}
+
 /* Footer section beginning */
 
 .footer{
-    margin-top: 16.38rem;
+    margin-top: 6.5rem;
     margin-bottom: 9.8rem;
     display: flex;
     flex-direction: column;
@@ -188,21 +196,29 @@ body{
 
  /* Media Queries */
 
+ @media (max-width: 1325px){
+    .profile-info-name{
+        font-size: 7rem;
+    }
+ }
+
  @media (max-width: 1024px){
-    /* Header section beginning */
-    .header, .main{
+    .main, .footer{
         margin: 0;   
     }
+
+    /* Main section beginning */
+
+    .main{
+        margin-top: 7.2rem;
+        margin-bottom: 7.6rem;
+    }
+    
+    /* Profile section beginning */
 
     .email-desktop{
         visibility: hidden;
     }
-
-    /* Header section ending */
-
-    /* Main section beginning */
-    
-    /* Profile section beginning */
 
     .profile-info-name{
         font-size: 3.74rem;
@@ -224,7 +240,7 @@ body{
     /* Product list section beginning */
 
     .product-list{
-        margin-top: 6.5rem;
+        margin-top: 7rem;
         margin-bottom: 4.95rem;
     }
 
@@ -236,36 +252,72 @@ body{
 
     /* Logos section beginning */
 
-    /* .logos-section{
-        margin: 0 3.4rem;
-    } */
-
     .logos-section-header{
         font-size: 2.16rem;
     }
 
     .logos-section-list{
         margin-top: 4.29rem;
+        margin-right: 0.5rem;
+    }
+
+    .logos-section-list-container{
+        width: 8.78rem;
+        margin: 2rem 2rem 5.3rem 2rem;
+    }
+
+    .logos-section-list-spotify-image-container{
+        height: 2.2rem;
+    }
+    
+    .logos-section-list-adidas-image-container{
+        height: 4.1rem;
+    }
+    
+    .logos-section-list-audi-image-container{
+        height: 2.4rem;
+    }
+    
+    .logos-section-list-lufthansa-image-container{
+        height: 1.8rem;
+    }
+    
+    .logos-section-list-ikea-image-container{
+        height: 2.63rem;
+    }
+    
+    .logos-section-list-montblanc-image-container{
+        height: 3.85rem;
     }
 
     /* Logos section ending */
 
     /* Main section ending */
 
+    .header-footer-divider-small{
+        width: 1.5rem;
+        margin-right: 1.6rem;
+    }
+
+    .header-footer-divider-large{
+        width: 9.5rem;
+    }
+
     /* Footer section beginning */
 
     .footer{
+        margin-top: 2.95rem;
         margin-bottom: 3.7rem;
     }
 
     .footer-social-list{
         margin-bottom: 3.74rem;
+        column-gap: 0.4rem;
     }
 
     .footer-social-icon-container{
-        /* margin: 0.58rem; */
-        width: 4.1rem;
-        height: 4.1rem;
+        width: 4.05rem;
+        height: 4.05rem;
     }
 
     .footer-social-icon{
@@ -277,5 +329,4 @@ body{
     }
 
     /* Footer section ending */
-
  }
