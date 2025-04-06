@@ -63,7 +63,7 @@ body{
     font-weight: 700;
 }
 
-/* Header menu and options */
+/* Header menu and options beginning */
 
 .menu-container{
     height: 5.6rem;
@@ -121,7 +121,9 @@ body{
     font-weight: 300;
 }
 
-/* Hesder section ending */
+/* Header menu and options ending */
+
+/* Header section ending */
 
 /* Main section beginning */
 
