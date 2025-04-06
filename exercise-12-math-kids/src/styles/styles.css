@@ -1,0 +1,39 @@
+/* Global variables */
+
+:root{
+    --black: #000;
+    --white: #fff;
+    --header-background: #aae187;
+    --circle-background: #00987c;
+    --triangle-background: #ffabdc;
+    --square-background: #e0e0e0;
+    --dense-blue: #0e62d6;
+    --light-blue: #3388ff;
+    --dense-grey: #455e7f;
+}
+
+/* Resetting default styles */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonts and other overall styles */
+
+body{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* Header section beginning */
+
+.header{
+    height: 4.46rem;
+    background-color: var(--header-background);
+    color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
