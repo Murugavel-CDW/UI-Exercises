@@ -13,12 +13,13 @@
     box-sizing: border-box;
 }
 
-/* Body background image */
+/* Body background image and Font styles */
 
 body{
     background: no-repeat url("../assets/images/background-image.png");
     background-size: cover;
     color: var(--white);
+    font-family: "Roboto", sans-serif;
 }
 
 /* Overlay styles */
@@ -31,4 +32,161 @@ body{
     left: 0;
     background-color: rgba(0, 0, 0, 0.25);
     z-index: -1;
+}
+
+/* Header section beginning */
+
+.header{
+    margin-top: 2.7rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.header-title{
+    font-size: 5.4rem;
+    font-weight: 650;
+    letter-spacing: 3.5px;
+}
+
+.header-title-additional-info{
+    transform: rotate(-90deg);
+    font-size: 2.9rem;
+    font-weight: 500;
+    position: absolute;
+    right: -114px;
+    top: 146px;
+}
+
+.additional-info-bigger-text{
+    font-size: 7.47rem;
+    font-weight: 700;
+}
+
+/* Header menu and options */
+
+.menu-container{
+    height: 5.6rem;
+    width: 5.62rem;
+    background-color: var(--black);
+    position: absolute;
+    display: grid;
+    place-items: center;
+    left: 0;
+    top: 1px;
+}
+
+.menu-icon{
+    font-size: 1.8rem;
+}
+
+.menu-options-container-wrapper{
+    position: absolute;
+    left: 0;
+    top: 37px;
+    width: 0;
+    overflow: hidden;
+    padding-top: 3.3rem;
+}
+
+.menu-options-container{
+    background-color: var(--black);
+    border-radius: 0 1.8rem 1.8rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hat-image-container{
+    padding-top: 2.75rem;
+    width: 6.34rem;
+}
+
+.hat-image{
+    width: 100%;
+}
+
+.hat-options-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.93rem;
+    margin-bottom: 1.3rem;
+}
+
+.hat-options-list-item{
+    margin: 0.65rem 0;
+    font-size: 1.38rem;
+    font-weight: 300;
+}
+
+/* Hesder section ending */
+
+/* Main section beginning */
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spacer{
+    height: 31.1rem;
+}
+
+.slogan-text{
+    margin-left: 6rem;
+    width: 46rem;
+}
+
+.slogan-smaller-text{
+    font-size: 7.5rem;
+    letter-spacing: 5.5px;
+    line-height: 10.2rem;
+    font-weight: 500;
+}
+
+.slogan-bigger-text{
+    font-size: 10rem;
+    font-weight: 700;
+    line-height: 5.9rem;
+    letter-spacing: 7px;
+}
+
+/* Main section ending */
+
+/* Footer section beginning */
+
+.footer-social-icon-container{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1rem;
+}
+
+.social-icon{
+    margin: 0.2rem 0.6rem 1.27rem;
+}
+
+.social-icon-twitter{
+    font-size: 2.4rem;
+}
+
+.social-icon-facebook{
+    padding-top: 0.15rem;
+    font-size: 2rem;
+}
+
+/* Footer section ending */
+
+/* Pseudo class styles */
+
+.menu-icon:hover + .menu-options-container-wrapper, .menu-options-container-wrapper:hover{
+    width: 16.87rem;
+    transition: width 1.5s ease-out;
+}
+
+.hat-options-list-item:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }
