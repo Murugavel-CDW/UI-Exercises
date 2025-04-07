@@ -33,13 +33,15 @@ body{
 /* Main section beginning */
 
 .main{
-    margin: 4.3rem 9.9rem 17.7rem;
+    margin: 4.3rem 9.5rem 17.7rem 9.2rem;
 }
 
 .email-desktop{
     align-self: flex-end;
     font-size: 1.6rem;
     margin-bottom: 7.8rem;
+    margin-right: 1.5rem;
+    font-weight: 500;
 }
 
 .profile-info{
@@ -69,13 +71,13 @@ body{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 8.85rem;
+    margin-top: 7.75rem;
     margin-bottom: 8.35rem;
 }
 
 .product-list-item-container{
-    width: 27rem;
-    margin: 1.1rem;
+    width: 27.08rem;
+    margin: 1.085rem;
 }
 
 .product-list-item{
