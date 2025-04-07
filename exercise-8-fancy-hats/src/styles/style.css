@@ -19,7 +19,7 @@ body{
     background: no-repeat url("../assets/images/background-image.png");
     background-size: cover;
     color: var(--white);
-    font-family: "Roboto", sans-serif;
+    font-family: sans-serif;
 }
 
 /* Overlay styles */
@@ -37,21 +37,21 @@ body{
 /* Header section beginning */
 
 .header{
-    margin-top: 2.7rem;
+    margin-top: 2.91rem;
     display: flex;
     justify-content: center;
     position: relative;
 }
 
 .header-title{
-    font-size: 5.4rem;
-    font-weight: 650;
+    font-size: 5.05rem;
+    font-weight: 550;
     letter-spacing: 3.5px;
 }
 
 .header-title-additional-info{
     transform: rotate(-90deg);
-    font-size: 2.9rem;
+    font-size: 2.8rem;
     font-weight: 500;
     position: absolute;
     right: -114px;
@@ -59,7 +59,7 @@ body{
 }
 
 .additional-info-bigger-text{
-    font-size: 7.47rem;
+    font-size: 7.5rem;
     font-weight: 700;
 }
 
@@ -83,7 +83,7 @@ body{
 .menu-options-container-wrapper{
     position: absolute;
     left: 0;
-    top: 37px;
+    top: 36px;
     width: 0;
     overflow: hidden;
     padding-top: 3.3rem;
@@ -98,8 +98,8 @@ body{
 }
 
 .hat-image-container{
-    padding-top: 2.75rem;
-    width: 6.34rem;
+    padding-top: 2.7rem;
+    width: 6.27rem;
 }
 
 .hat-image{
@@ -116,8 +116,8 @@ body{
 }
 
 .hat-options-list-item{
-    margin: 0.65rem 0;
-    font-size: 1.38rem;
+    margin: 0.72rem 0;
+    font-size: 1.28rem;
     font-weight: 300;
 }
 
@@ -134,23 +134,23 @@ body{
 }
 
 .spacer{
-    height: 31.1rem;
+    height: 31.4rem;
 }
 
 .slogan-text{
-    margin-left: 6rem;
-    width: 46rem;
+    margin-left: 7.2rem;
+    width: 47rem;
 }
 
 .slogan-smaller-text{
-    font-size: 7.5rem;
+    font-size: 7.1rem;
     letter-spacing: 5.5px;
     line-height: 10.2rem;
-    font-weight: 500;
+    font-weight: 550;
 }
 
 .slogan-bigger-text{
-    font-size: 10rem;
+    font-size: 9.8rem;
     font-weight: 700;
     line-height: 5.9rem;
     letter-spacing: 7px;
