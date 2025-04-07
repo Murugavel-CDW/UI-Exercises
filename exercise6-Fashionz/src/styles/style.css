@@ -105,49 +105,21 @@ body{
     background-color: var(--card-background);
     height: 25.73rem;
     width: 20.4rem;
-    /* padding-top: 5.2rem; */
+    padding-top: 5.4rem;
+    padding-right: 0.5rem;
     position: relative;
 }
 
-/* .wardrobe-image-container{
-    width: 11.27rem;
-    height: 15rem;
-    margin-top: 0.7rem;
-    margin-right: 0.4rem;
-}
-
-.jacket-image-container{
-    width: 11.3rem;
-    height: 15.6rem;
-    margin-top: 0.7rem;
-    margin-right: 0.6rem;
-}
-
-.round-neck-image-container{
-    width: 15.3rem;
-    height: 15.1rem;
-    margin-top: 0.4rem;
-    margin-right: 0.4rem;
-}
-
-.shirt-image-container{
-    width: 14.15rem;
-    height: 15.8rem;
-    margin-top: 0.8rem;
-    margin-right: 0.6rem;
-} */
-
 .item-image-container{
-    width: 15.7rem;
-    height: 15.6rem;
+    width: 15.2rem;
+    height: 15.5rem;
     margin: auto;
-    /* margin-top: 0.6rem; */
-    /* padding-right: 0.4rem; */
     text-align: center;
 }
 
 .item-image{
     height: 100%;
+    width: 100%;
     object-fit: contain;
 }
 
