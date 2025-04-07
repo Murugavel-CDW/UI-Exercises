@@ -44,18 +44,17 @@ body{
 }
 
 .header-title{
-    font-size: 5.05rem;
+    font-size: 4.7rem;
     font-weight: 550;
-    letter-spacing: 3.5px;
 }
 
 .header-title-additional-info{
     transform: rotate(-90deg);
-    font-size: 2.8rem;
-    font-weight: 500;
+    font-size: 2.6rem;
+    font-weight: 550;
     position: absolute;
-    right: -114px;
-    top: 146px;
+    right: -108px;
+    top: 139px;
 }
 
 .additional-info-bigger-text{
@@ -73,23 +72,20 @@ body{
     display: grid;
     place-items: center;
     left: 0;
-    top: 1px;
+    top: -2px;
 }
 
 .menu-icon{
     font-size: 1.8rem;
 }
 
-.menu-options-container-wrapper{
+.menu-options-container{
     position: absolute;
     left: 0;
-    top: 36px;
+    top: 100%;
     width: 0;
     overflow: hidden;
-    padding-top: 3.3rem;
-}
-
-.menu-options-container{
+    padding-top: 0.1rem;
     background-color: var(--black);
     border-radius: 0 1.8rem 1.8rem 0;
     display: flex;
@@ -113,11 +109,14 @@ body{
     align-items: center;
     margin-top: 0.93rem;
     margin-bottom: 1.3rem;
+    white-space: nowrap;
 }
 
 .hat-options-list-item{
     margin: 0.72rem 0;
     font-size: 1.28rem;
+    white-space: nowrap;
+    overflow: hidden;
     font-weight: 300;
 }
 
@@ -127,43 +126,35 @@ body{
 
 /* Main section beginning */
 
-.main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.spacer{
-    height: 31.4rem;
-}
-
 .slogan-text{
-    margin-left: 7.2rem;
-    width: 47rem;
+    position: fixed;
+    left: 34.05rem;
+    bottom: 60px;
+    width: 40rem;
 }
 
 .slogan-smaller-text{
-    font-size: 7.1rem;
-    letter-spacing: 5.5px;
-    line-height: 10.2rem;
+    font-size: 6.75rem;
+    line-height: 9.1rem;
     font-weight: 550;
 }
 
 .slogan-bigger-text{
-    font-size: 9.8rem;
+    font-size: 8.95rem;
     font-weight: 700;
     line-height: 5.9rem;
-    letter-spacing: 7px;
 }
 
 /* Main section ending */
 
 /* Footer section beginning */
 
-.footer-social-icon-container{
+.footer{
     display: flex;
     justify-content: flex-end;
-    margin-right: 1rem;
+    position: fixed;
+    bottom: -16px;
+    right: 15px;
 }
 
 .social-icon{
@@ -183,7 +174,7 @@ body{
 
 /* Pseudo class styles */
 
-.menu-icon:hover + .menu-options-container-wrapper, .menu-options-container-wrapper:hover{
+.menu-container:hover > .menu-options-container, .menu-options-container:hover{
     width: 16.87rem;
     transition: width 1.5s ease-out;
 }
@@ -191,4 +182,8 @@ body{
 .hat-options-list-item:hover{
     cursor: pointer;
     text-decoration: underline;
+}
+
+.social-icon:hover{
+    cursor: pointer;
 }
