@@ -19,70 +19,75 @@
     
     <main class="main">
         <!-- Shapes section -->
-        <!-- <section class="shapes">
+        <section class="shapes">
             <h2 class="section-info-text">1. Choose a Shape</h2>
             <div class="shapes-list-container">
-                <div class="shapes-list-item shapes-circle">
-                    <div class="tick-mark"></div>
+                <div class="shapes-list-item shapes-circle" id="circle">
+                    <div class="tick-mark-circle"></div>
                 </div>
-                <div class="shapes-list-item shapes-triangle">
-                    <div class="tick-mark"></div>
+                <div class="shapes-list-item shapes-triangle" id="triangle">
+                    <div class="tick-mark-triangle"></div>
                 </div>
-                <div class="shapes-list-item shapes-square">
-                    <div class="tick-mark"></div>
+                <div class="shapes-list-item shapes-square" id="square">
+                    <div class="tick-mark-square"></div>
                 </div>
             </div>
             <button class="section-button" id="shapes-section-button">
                 <p class="section-button-text">NEXT</p>
             </button>
-        </section> -->
+        </section>
     
         <!-- Shapes value input section -->
-        <!-- <section class="shape-value">
+        <section class="shape-value">
             <h2 class="section-info-text">2. Enter Radius</h2>
             <input type="text" name="dimension" id="dimension-input" class="shape-value-input">
             <button class="section-button" id="dimension-section-button">
                 <p class="section-button-text">CALCULATE</p>
             </button>
-        </section> -->
+        </section>
     
         <!-- Calculation result section -->
         <section class="shape-calculation-results">
             <div class="shapes-list-item shapes-circle">
             </div>
+            <div class="spacer"></div>
             <h2 class="section-info-text">Circle</h2>
             <!-- Result containers to display -->
-            <div class="result-container">
-                <div class="result-heading">
-                    <p class="result-text">RADIUS</p>
+            <div class="result-container-wrapper">
+                <div class="result-container">
+                    <div class="result-heading">
+                        <p class="result-text">RADIUS</p>
+                    </div>
+                    <div class="result-formula">
+                        <p class="result-text">s</p>
+                    </div>
+                    <div class="result-value">
+                        <p class="result-text">5 cm</p>
+                    </div>
                 </div>
-                <div class="result-formula">
-                    <p class="result-text">r</p>
+    
+                <div class="result-container">
+                    <div class="result-heading">
+                        <p class="result-text">AREA</p>
+                    </div>
+                    <div class="result-formula">
+                        <p class="result-text">r</p>
+                    </div>
+                    <div class="result-value">
+                        <p class="result-text">78.53 sq cm</p>
+                    </div>
                 </div>
-                <div class="result-value">
-                    <p class="result-text">5 cm</p>
-                </div>
-            </div>
-            <div class="result-container">
-                <div class="result-heading">
-                    <p class="result-text">AREA</p>
-                </div>
-                <div class="result-formula">
-                    <p class="result-text">r</p>
-                </div>
-                <div class="result-value">
-                    <p class="result-text">78.53 sq cm</p>
-                </div>
-            </div>
-            <div class="result-container">
-                <div class="result-heading">
-                    <p class="result-text">PERIMETER</p>
-                </div>
-                <div class="result-formula">
-                    <p class="result-text">2r</p>
-                </div>
-                <div class="result-value">
-                    <p class="result-text">31.41 cm</p>
+    
+                <div class="result-container">
+                    <div class="result-heading">
+                        <p class="result-text">PERIMETER</p>
+                    </div>
+                    <div class="result-formula">
+                        <p class="result-text">2r</p>
+                    </div>
+                    <div class="result-value">
+                        <p class="result-text">31.41 cm</p>
+                    </div>
                 </div>
             </div>
             <button class="section-button" id="result-section-button">
@@ -90,5 +95,6 @@
             </button>
         </section>
     </main>
+    <script src="../src/scripts/index.js"></script>
 </body>
 </html>

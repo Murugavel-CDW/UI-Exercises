@@ -68,6 +68,7 @@ section{
 }
 
 .section-button{
+    display: none;
     width: 13.655rem;
     height: 3.4rem;
     background-color: transparent;
@@ -102,6 +103,21 @@ section{
 
 .shapes-list-item{
     margin: 0 2.22rem;
+    position: relative;
+}
+
+.tick-mark{
+    position: absolute;
+    width: 3.2rem;
+    height: 1.5rem;
+    border-bottom: 2.5px solid var(--white);
+    border-left: 2.5px solid var(--white);
+    transform: rotate(-45deg);
+}
+
+.tick-mark-circle{
+    top: 3.41rem;
+    left: 3.4rem;
 }
 
 .shapes-circle{
@@ -111,12 +127,22 @@ section{
     background-color: var(--circle-background);
 }
 
+.tick-mark-triangle{
+    top: 5.1rem;
+    right: -1.5rem;
+}
+
 .shapes-triangle{
     width: 0;
 	height: 0;
 	border-left: 5rem solid transparent;
 	border-right: 5rem solid transparent;
 	border-bottom: 10rem solid var(--triangle-background);
+}
+
+.tick-mark-square{
+    top: 3.65rem;
+    left: 3.2rem;
 }
 
 .shapes-square{
@@ -131,6 +157,7 @@ section{
 
 .shape-value{
     padding-top: 1.6rem;
+    display: none;
 }
 
 .shape-value-input{
@@ -142,6 +169,55 @@ section{
 }
 
 /* Shape value section ending */
+
+/* Calculation Result section beginning */
+
+.shape-calculation-results{
+    display: none;
+    padding-top: 1.2rem;
+}
+
+.spacer{
+    height: 2rem;
+}
+
+.result-container-wrapper{
+    margin-bottom: 4.05rem;
+}
+
+.result-container{
+    display: flex;
+    height: 2.8rem;
+    margin: 1.1rem 0;
+}
+
+.result-container > div{
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    padding-left: 0.82rem;
+}
+
+.result-heading{
+    background-color: var(--dense-blue);
+    font-size: 1.3rem;
+    width: 12.69rem;
+}
+
+.result-formula{
+    background-color: var(--dense-grey);
+    font-size: 1.2rem;
+    width: 8.14rem;
+}
+
+.result-value{
+    background-color: var(--light-blue);
+    font-size: 1.25rem;
+    width: 8.33rem;
+}
+
+/* Calculation Result section ending */
+
 
 /* Individual section styles ending */
 
