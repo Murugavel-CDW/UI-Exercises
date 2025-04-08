@@ -18,7 +18,7 @@
 /* Font styles */
 
 body{
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     background-color: var(--black);
     color: var(--white);
 }
