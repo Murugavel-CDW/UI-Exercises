@@ -18,7 +18,7 @@
     </header>
     
     <main class="main">
-        <!-- Shapes section -->
+        <!-- Shapes section beginning -->
         <section class="shapes">
             <h2 class="section-info-text">1. Choose a Shape</h2>
             <div class="shapes-list-container">
@@ -36,33 +36,35 @@
                 <p class="section-button-text">NEXT</p>
             </button>
         </section>
+        <!-- Shapes section ending -->
     
-        <!-- Shapes value input section -->
+        <!-- Shapes value input  beginning -->
         <section class="shape-value">
-            <h2 class="section-info-text">2. Enter Radius</h2>
-            <input type="text" name="dimension" id="dimension-input" class="shape-value-input">
+            <h2 class="section-info-text">2. <span id="value-prompt-text"></span></h2>
+            <input type="number" name="dimension" id="dimension-input" class="shape-value-input">
             <button class="section-button" id="dimension-section-button">
                 <p class="section-button-text">CALCULATE</p>
             </button>
         </section>
+        <!-- Shapes value input section ending -->
     
-        <!-- Calculation result section -->
+        <!-- Calculation result section beginning -->
         <section class="shape-calculation-results">
-            <div class="shapes-list-item shapes-circle">
+            <div id="shape-container">
             </div>
             <div class="spacer"></div>
-            <h2 class="section-info-text">Circle</h2>
+            <h2 class="section-info-text" id="shape-name"></h2>
             <!-- Result containers to display -->
             <div class="result-container-wrapper">
                 <div class="result-container">
                     <div class="result-heading">
-                        <p class="result-text">RADIUS</p>
+                        <p class="result-text" id="dimension-text"></p>
                     </div>
                     <div class="result-formula">
-                        <p class="result-text">s</p>
+                        <p class="result-text" id="dimension-symbol"></p>
                     </div>
                     <div class="result-value">
-                        <p class="result-text">5 cm</p>
+                        <p class="result-text" id="dimension-value"></p>
                     </div>
                 </div>
     
@@ -71,10 +73,10 @@
                         <p class="result-text">AREA</p>
                     </div>
                     <div class="result-formula">
-                        <p class="result-text">r</p>
+                        <p class="result-text" id="area-formula-text"></p>
                     </div>
                     <div class="result-value">
-                        <p class="result-text">78.53 sq cm</p>
+                        <p class="result-text" id="area-value"></p>
                     </div>
                 </div>
     
@@ -83,10 +85,10 @@
                         <p class="result-text">PERIMETER</p>
                     </div>
                     <div class="result-formula">
-                        <p class="result-text">2r</p>
+                        <p class="result-text" id="perimeter-formula-text"></p>
                     </div>
                     <div class="result-value">
-                        <p class="result-text">31.41 cm</p>
+                        <p class="result-text" id="perimeter-value"></p>
                     </div>
                 </div>
             </div>
@@ -94,7 +96,9 @@
                 <p class="section-button-text">START AGAIN</p>
             </button>
         </section>
+        <!-- Calculation result section ending -->
     </main>
+    <!-- External JS scripts -->
     <script src="../src/scripts/index.js"></script>
 </body>
 </html>

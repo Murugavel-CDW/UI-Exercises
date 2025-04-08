@@ -12,6 +12,16 @@
     --dense-grey: #455e7f;
 }
 
+/* Webkit styles to remove arrows in number input */
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
 /* Resetting default styles */
 
 *{
@@ -27,6 +37,10 @@ body{
     background-color: var(--black);
     color: var(--white);
     font-family: "Roboto", sans-serif;
+}
+
+.text-small{
+    font-size: 0.7rem;
 }
 
 /* Header section beginning */
@@ -68,7 +82,6 @@ section{
 }
 
 .section-button{
-    display: none;
     width: 13.655rem;
     height: 3.4rem;
     background-color: transparent;
@@ -151,6 +164,10 @@ section{
     background-color: var(--square-background);
 }
 
+#shapes-section-button{
+    visibility: hidden;
+}
+
 /* Shapes section ending */
 
 /* Shape value section beginning */
@@ -166,6 +183,8 @@ section{
     width: 44.6rem;
     border: 1px solid var(--white);
     margin: 3.3rem 0;
+    color: var(--white);
+    font-size: 3.2rem;
 }
 
 /* Shape value section ending */
@@ -195,7 +214,7 @@ section{
     display: flex;
     align-items: center;
     font-weight: 300;
-    padding-left: 0.82rem;
+    padding: 0 0.82rem;
 }
 
 .result-heading{
@@ -213,11 +232,10 @@ section{
 .result-value{
     background-color: var(--light-blue);
     font-size: 1.25rem;
-    width: 8.33rem;
+    flex-grow: 1;
 }
 
 /* Calculation Result section ending */
-
 
 /* Individual section styles ending */
 
@@ -225,4 +243,8 @@ section{
 
 .section-button:hover, .shapes-list-item:hover{
     cursor: pointer;
+}
+
+input:focus{
+    outline: none;
 }

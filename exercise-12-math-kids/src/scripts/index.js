@@ -2,50 +2,71 @@
 
 const shapesObject = {
     circle: {
-        displayValuePrompt: () => {
-
-        },
-        displayResults: () => {
-
-        },
-        radius: 0,
-        area: 0,
-        perimeter: 0,
-        PI: 3.14
+        calculateArea: (radius) => +(Math.PI * (radius * radius)).toFixed(2),
+        calculatePerimeter: (radius) => +(2 * Math.PI * radius).toFixed(2),
+        fetchValuePrompt: () => "Enter Radius",
+        appendResultsToDom: function(dimensionValue) {
+            const area = this.calculateArea(dimensionValue);
+            const perimeter = this.calculatePerimeter(dimensionValue);
+            // Assigning the specific formulas, etc in the result container
+            resultDimensionText.innerText = "RADIUS";
+            resultDimensionSymbol.innerText = "r";
+            resultDimensionValue.innerText = dimensionValue + "cm";
+            areaFormulaElement.innerHTML = `πr<sup class="text-small">2</sup>`;
+            areaValueElement.innerText = area + " sq cm";
+            perimeterFormulaElement.innerText = "2πr";
+            perimeterValueElement.innerText = perimeter + " cm";
+        }
     },
     square: {
-        displayValuePrompt: () => {
-
-        },
-        displayResults: () => {
-
-        },
-        side: 0,
-        area: 0,
-        perimeter: 0
+        calculateArea: (side) => +(side * side).toFixed(2),
+        calculatePerimeter: (side) => +(4 * side).toFixed(2),
+        fetchValuePrompt: () => "Enter Side",
+        appendResultsToDom: function(dimensionValue) {
+            const area = this.calculateArea(dimensionValue);
+            const perimeter = this.calculatePerimeter(dimensionValue);
+            resultDimensionText.innerText = "SIDE";
+            areaFormulaElement.innerHTML = "s * s";
+            resultDimensionSymbol.innerText = "s";
+            resultDimensionValue.innerText = dimensionValue + " cm";
+            areaValueElement.innerText = area + " sq cm";
+            perimeterFormulaElement.innerText = "4 * s";
+            perimeterValueElement.innerText = perimeter + " cm";
+        }
     },
     triangle: {
-        displayValuePrompt: () => {
-
-        },
-        displayResults: () => {
-
-        },
-        baseAndHeight: 0,
-        area: 0,
-        perimeter: 0
+        calculateArea: (side) => +(0.433 * side * side).toFixed(2),
+        calculatePerimeter: (side) => +(3 * side).toFixed(2),
+        fetchValuePrompt: () => "Enter Side(Base and Height)",
+        appendResultsToDom: function(dimensionValue) {
+            const area = this.calculateArea(dimensionValue);
+            const perimeter = this.calculatePerimeter(dimensionValue);
+            resultDimensionText.innerText = "SIDE";
+            resultDimensionSymbol.innerText = "s";
+            areaFormulaElement.innerHTML = "0.433 * s * s";
+            resultDimensionValue.innerText = dimensionValue + "cm";
+            areaValueElement.innerText = area + " sq cm";
+            perimeterFormulaElement.innerText = "3 * s";
+            perimeterValueElement.innerText = perimeter + " cm";
+        }
     }
 }
+
+// DOM Elements
+const shapeListItems = document.getElementsByClassName("shapes-list-item");
+const shapeSectionButton = document.getElementById("shapes-section-button");
+const resultDimensionText = document.getElementById("dimension-text");
+const resultDimensionSymbol = document.getElementById("dimension-symbol");
+const resultDimensionValue = document.getElementById("dimension-value");
+const areaFormulaElement = document.getElementById("area-formula-text");
+const areaValueElement = document.getElementById("area-value");
+const perimeterFormulaElement = document.getElementById("perimeter-formula-text");
+const perimeterValueElement = document.getElementById("perimeter-value");
 
 let prevTickedElement = null; // last checked element
 let currentShape = "";
 
-const shapeListItems = document.getElementsByClassName("shapes-list-item");
-
-const item = document.getElementById("id");
-
-// item.se
-
+// Attaching event listeners for all shapes
 for (let shape of shapeListItems) {
     shape.addEventListener("click", (event) => {
         const currentElement = event.currentTarget;
@@ -57,7 +78,40 @@ for (let shape of shapeListItems) {
         }
         const currentElementCheckDiv = currentElement.querySelector("div");
         currentElementCheckDiv.classList.add("tick-mark");
+        if (!prevTickedElement) { // if there is no previously ticked shape
+            shapeSectionButton.style.visibility = "visible";
+        }
         prevTickedElement = currentElementCheckDiv;
-        
     })
 }
+
+// Event Listener for Shape section Button
+shapeSectionButton.addEventListener("click", () => {
+    document.querySelector(".shapes").style.display = "none"; // hiding the current section
+    prevTickedElement.classList.remove("tick-mark"); // removing the tickmark on the last checked item
+    document.getElementById("value-prompt-text").innerText = shapesObject[currentShape].fetchValuePrompt();
+    document.querySelector(".shape-value").style.display = "flex"; // making the next section visible
+});
+
+// Event Listener for Dimension section Button
+document.getElementById("dimension-section-button").addEventListener("click", () => {
+    const inputElement = document.getElementById("dimension-input");
+    const inputValue = parseFloat(inputElement.value);
+    inputElement.value = ""; // resetting the value of the input
+    if (!inputValue || typeof(inputValue) != "number") { // checking if the entered input is valid
+        return;
+    }
+    const resultSection = document.querySelector(".shape-calculation-results");
+    const shapeContainer = document.getElementById("shape-container");
+    shapeContainer.setAttribute("class", `shapes-${currentShape}`); // adding the needed shape into the section
+    document.querySelector(".shape-value").style.display = "none";
+    document.getElementById("shape-name").innerText = currentShape.charAt(0).toUpperCase() + currentShape.slice(1);
+    shapesObject[currentShape].appendResultsToDom(inputValue);
+    resultSection.style.display = "flex";
+});
+
+// Even Listener for Result section Button
+document.getElementById("result-section-button").addEventListener("click", () => {
+    document.querySelector(".shape-calculation-results").style.display = "none";
+    document.querySelector(".shapes").style.display = "flex";
+})
