@@ -23,6 +23,7 @@
 /* Fonts and other overall styles */
 
 body{
+    height: 100%;
     background-color: var(--black);
     color: var(--white);
     font-family: "Roboto", sans-serif;
@@ -37,6 +38,115 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 1.22rem;
+    font-weight: 700;
+    padding: 0.2rem 2rem 0;
+    letter-spacing: 1.1px;
+}
+
+/* Header section ending */
+
+/* Main section beginning */
+
+.main{
+    height: 55.4rem;
+}
+
+/* Common section styles beginning */
+
+section{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-info-text{
+    font-size: 3.2rem;
+    font-weight: 300;
+}
+
+.section-button{
+    width: 13.655rem;
+    height: 3.4rem;
+    background-color: transparent;
+    border: 1.5px solid var(--white);
+    border-radius: 5px;
+}
+
+.section-button-text{
+    color: var(--white);
     font-size: 1.5rem;
-    font-weight: 500;
+}
+
+/* Common section styles ending */
+
+/* Individual section styles beginning */
+
+/* Shapes section beginning */
+
+.shapes{
+    padding-top: 4.5rem;
+}
+
+.shapes-list-container{
+    margin-top: 5.8rem;
+    margin-bottom: 5.72rem;
+    margin-left: 0.35rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.shapes-list-item{
+    margin: 0 2.22rem;
+}
+
+.shapes-circle{
+    width: 9.6rem;
+    height: 9.6rem;
+    border-radius: 50%;
+    background-color: var(--circle-background);
+}
+
+.shapes-triangle{
+    width: 0;
+	height: 0;
+	border-left: 5rem solid transparent;
+	border-right: 5rem solid transparent;
+	border-bottom: 10rem solid var(--triangle-background);
+}
+
+.shapes-square{
+    width: 9.6rem;
+    height: 9.6rem;
+    background-color: var(--square-background);
+}
+
+/* Shapes section ending */
+
+/* Shape value section beginning */
+
+.shape-value{
+    padding-top: 1.6rem;
+}
+
+.shape-value-input{
+    background-color: transparent;
+    height: 5.39rem;
+    width: 44.6rem;
+    border: 1px solid var(--white);
+    margin: 3.3rem 0;
+}
+
+/* Shape value section ending */
+
+/* Individual section styles ending */
+
+/* Pseudo styles */
+
+.section-button:hover, .shapes-list-item:hover{
+    cursor: pointer;
 }
