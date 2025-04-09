@@ -35,6 +35,9 @@ const calculator = {
     }
 }
 
+
+
+
 console.log(`1 + 2 = ${calculator.add(1, 2)}`);
 console.log(calculator.add("apple", 1)); // logs as 0
 console.log(`5 - 3 = ${calculator.subtract(5, 3)}`);
@@ -42,3 +45,18 @@ console.log(`5 * 5 = ${calculator.multiply(5, 5)}`);
 console.log(`5 / 0 = ${calculator.divide(5, 0)}`);
 console.log(calculator.divide("apple", 0));
 console.log(`25 / 5 = ${calculator.divide(25, 5)}`);
+
+
+let a = {
+    name: "nike",
+    age: {
+        num: 20
+    }
+}
+
+let b = { ...a }
+b.age.num = 50;
+
+console.log(a.age.num);
+console.log(b.age.num);
+
