@@ -6000,3 +6000,24 @@ const friendsList = [{
 }
 ];
 
+const friendsListContainer = document.createElement("div");
+friendsListContainer.setAttribute("class", "friends-list-container");
+document.querySelector("main").appendChild(friendsListContainer);
+
+for (const friendObj of friendsList) {
+    const fullName = friendObj.first_name + " " + friendObj.last_name;
+
+    const friendListItem = document.createElement("div"); // friend list item container
+    friendListItem.setAttribute("class", "friend-list-item");
+
+    const profileContainer = document.createElement("div"); // profile container
+    profileContainer.setAttribute("class", "profile-info-container");
+
+    const profileImageElement = `<img src="${friendObj.img}" alt="profile-image" class="profile-image">`;
+    const userNameElement = `<p class="user-name">${fullName}</p>`;
+    const userEmailElement = `<p class="user-email">${fullName}</p>`;
+    profileContainer.append(userNameElement, userEmailElement);
+
+    friendListItem.append(profileImageElement, profileContainer);
+    friendsListContainer.appendChild(friendListItem);
+}
