@@ -2,39 +2,31 @@
 
 const shapesObject = {
     circle: {
+        dimensionText: "RADIUS",
+        dimensionSymbol: "r",
+        areaFormula: `πr<sup class="text-small">2</sup>`,
+        perimeterFormula: "2πr",
         calculateArea: (radius) => +(Math.PI * (radius * radius)).toFixed(2),
         calculatePerimeter: (radius) => +(2 * Math.PI * radius).toFixed(2),
-        fetchValuePrompt: () => "Enter Radius",
-        appendResultsToDom: () => {
-            // Assigning the specific formulas, etc in the result container
-            resultDimensionText.innerText = "RADIUS";
-            resultDimensionSymbol.innerText = "r";
-            areaFormulaElement.innerHTML = `πr<sup class="text-small">2</sup>`;
-            perimeterFormulaElement.innerText = "2πr";
-        }
+        fetchValuePrompt: () => "Enter Radius"
     },
-
     square: {
+        dimensionText: "SIDE",
+        dimensionSymbol: "s",
+        areaFormula: "s * s",
+        perimeterFormula: "4 * s",
         calculateArea: (side) => +(side * side).toFixed(2),
         calculatePerimeter: (side) => +(4 * side).toFixed(2),
         fetchValuePrompt: () => "Enter Side",
-        appendResultsToDom: () => {
-            resultDimensionText.innerText = "SIDE";
-            areaFormulaElement.innerHTML = "s * s";
-            resultDimensionSymbol.innerText = "s";
-            perimeterFormulaElement.innerText = "4 * s";
-        }
     },
     triangle: {
+        dimensionText: "SIDE",
+        dimensionSymbol: "s",
+        areaFormula: "0.433 * s * s",
+        perimeterFormula: "3 * s",
         calculateArea: (side) => +(0.433 * side * side).toFixed(2),
         calculatePerimeter: (side) => +(3 * side).toFixed(2),
         fetchValuePrompt: () => "Enter Side(Base and Height)",
-        appendResultsToDom: () => {
-            resultDimensionText.innerText = "SIDE";
-            resultDimensionSymbol.innerText = "s";
-            areaFormulaElement.innerHTML = "0.433 * s * s";
-            perimeterFormulaElement.innerText = "3 * s";
-        }
     }
 }
 
@@ -51,12 +43,21 @@ const fetchInputAndModifyDom = (event) => {
     }
     shapeContainer.setAttribute("class", `shapes-${currentShape}`); // adding the needed shape into the section
     shapeValueSection.style.display = "none";
-    document.getElementById("shape-name").innerText = currentShape.charAt(0).toUpperCase() + currentShape.slice(1);
-    shapesObject[currentShape].appendResultsToDom();
-    resultDimensionValue.innerText = inputValue;
-    areaValueElement.innerText = shapesObject[currentShape].calculateArea(inputValue);
-    perimeterValueElement.innerText = shapesObject[currentShape].calculatePerimeter(inputValue);
+    appendResultsToDom(inputValue);
     calculationResultSection.style.display = "flex";
+}
+
+// Function to append the result to DOM 
+
+const appendResultsToDom = (inputValue) => {
+    calculationResultSection.querySelector("#shape-name").innerText = currentShape.charAt(0).toUpperCase() + currentShape.slice(1);
+    tableElements[0].innerText = shapesObject[currentShape].dimensionText;
+    tableElements[1].innerText = shapesObject[currentShape].dimensionSymbol;
+    tableElements[2].innerText = inputValue;
+    tableElements[3].innerHTML = shapesObject[currentShape].areaFormula;
+    tableElements[4].innerText = shapesObject[currentShape].calculateArea(inputValue);
+    tableElements[5].innerText = shapesObject[currentShape].perimeterFormula;
+    tableElements[6].innerText = shapesObject[currentShape].calculatePerimeter(inputValue);
 }
 
 // Section DOM Elements
@@ -75,13 +76,8 @@ const resultSectionButton = calculationResultSection.querySelector(".section-but
 // Value Promopt DOM Elements
 const valuePromptText = document.getElementById("value-prompt-text");
 const dimensionValueInput = document.getElementById("dimension-input");
-const resultDimensionText = document.getElementById("dimension-text");
-const resultDimensionSymbol = document.getElementById("dimension-symbol");
-const resultDimensionValue = document.getElementById("dimension-value");
-const areaFormulaElement = document.getElementById("area-formula-text");
-const areaValueElement = document.getElementById("area-value");
-const perimeterFormulaElement = document.getElementById("perimeter-formula-text");
-const perimeterValueElement = document.getElementById("perimeter-value");
+const tableElements = Array.from(calculationResultSection.querySelectorAll("td, span"))
+    .filter((element) => element.innerText == "");
 
 // Container Elements
 const shapeContainer = document.getElementById("shape-container");
