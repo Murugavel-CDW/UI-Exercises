@@ -1,0 +1,81 @@
+/* Global variables */
+
+:root{
+    --header-background: #3b1c67;
+    --card-background: #4d67b4;
+    --email-text-color: #fafbfd;
+    --white: #fff;
+}
+
+/* Resetting default styles */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Font styles */
+
+body{
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Header section beginning */
+
+.header{
+    height: 6.1rem;
+    background-color: var(--header-background);
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    padding: 0 2.16rem;
+}
+
+.header-title{
+    font-weight: 300;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+/* Header section ending */
+
+/* Main section beginning */
+
+.main{
+    margin-top: 4.25rem;
+    border: 1px solid black;
+}
+
+.friends-list-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.friend-list-item{
+    width: 31.49rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--card-background);
+    margin: 0.45rem;
+}
+
+.friend-list-item > div{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    /* margin: 0.92rem; */
+}
+
+.profile-image-container{
+    height: 4.5rem;
+    width: 4.5rem;
+}
+
+.profile-image-container > img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* Main section ending */
