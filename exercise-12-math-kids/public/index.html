@@ -13,13 +13,13 @@
 </head>
 <body>
     <header class="header">
-        <p class="header-app-name">MATH KIDS</p>
-        <p class="header-app-info">KIDS LEARNING APP</p>
+        <h1 class="header-app-name">MATH KIDS</p>
+        <h2 class="header-app-info">KIDS LEARNING APP</h2>
     </header>
     
     <main class="main">
         <!-- Shapes section beginning -->
-        <section class="shapes">
+        <section class="shapes" id="shapes">
             <h2 class="section-info-text">1. Choose a Shape</h2>
             <div class="shapes-list-container">
                 <div class="shapes-list-item shapes-circle" id="circle">
@@ -32,69 +32,42 @@
                     <div class="tick-mark-square"></div>
                 </div>
             </div>
-            <button class="section-button" id="shapes-section-button">
-                <p class="section-button-text">NEXT</p>
-            </button>
+            <button class="section-button" id="shapes-section-button">NEXT</button>
         </section>
         <!-- Shapes section ending -->
     
         <!-- Shapes value input  beginning -->
-        <section class="shape-value">
+        <section class="shape-value" id="shape-value">
             <h2 class="section-info-text">2. <span id="value-prompt-text"></span></h2>
             <input type="number" name="dimension" id="dimension-input" class="shape-value-input">
-            <button class="section-button" id="dimension-section-button">
-                <p class="section-button-text">CALCULATE</p>
-            </button>
+            <button class="section-button">CALCULATE</button>
         </section>
         <!-- Shapes value input section ending -->
     
         <!-- Calculation result section beginning -->
-        <section class="shape-calculation-results">
+        <section class="shape-calculation-results" id="shape-calculation-results">
             <div id="shape-container">
             </div>
-            <div class="spacer"></div>
-            <h2 class="section-info-text" id="shape-name"></h2>
+            <h2 class="section-info-text" id="shape-name">Circle</h2>
             <!-- Result containers to display -->
-            <div class="result-container-wrapper">
-                <div class="result-container">
-                    <div class="result-heading">
-                        <p class="result-text" id="dimension-text"></p>
-                    </div>
-                    <div class="result-formula">
-                        <p class="result-text" id="dimension-symbol"></p>
-                    </div>
-                    <div class="result-value">
-                        <p class="result-text" id="dimension-value"></p>
-                    </div>
-                </div>
-    
-                <div class="result-container">
-                    <div class="result-heading">
-                        <p class="result-text">AREA</p>
-                    </div>
-                    <div class="result-formula">
-                        <p class="result-text" id="area-formula-text"></p>
-                    </div>
-                    <div class="result-value">
-                        <p class="result-text" id="area-value"></p>
-                    </div>
-                </div>
-    
-                <div class="result-container">
-                    <div class="result-heading">
-                        <p class="result-text">PERIMETER</p>
-                    </div>
-                    <div class="result-formula">
-                        <p class="result-text" id="perimeter-formula-text"></p>
-                    </div>
-                    <div class="result-value">
-                        <p class="result-text" id="perimeter-value"></p>
-                    </div>
-                </div>
-            </div>
-            <button class="section-button" id="result-section-button">
-                <p class="section-button-text">START AGAIN</p>
-            </button>
+            <table class="result-container-wrapper">
+                <tr class="result-container">
+                    <td class="result-heading" id="dimension-text"></td>
+                    <td class="result-formula" id="dimension-symbol"></td>
+                    <td class="result-value"><span id="dimension-value"></span> cm</td>
+                </tr>
+                <tr class="result-container">
+                    <td class="result-heading">AREA</td>
+                    <td class="result-formula" id="area-formula-text"></td>
+                    <td class="result-value"><span id="area-value"></span> sq cm</td>
+                </tr>
+                <tr class="result-container">
+                    <td class="result-heading">PERIMETER</td>
+                    <td class="result-formula" id="perimeter-formula-text"></td>
+                    <td class="result-value"><span id="perimeter-value"></span> cm</td>
+                </tr>
+            </table>
+            <button class="section-button">START AGAIN</button>
         </section>
         <!-- Calculation result section ending -->
     </main>

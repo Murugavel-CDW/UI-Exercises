@@ -5,56 +5,76 @@ const shapesObject = {
         calculateArea: (radius) => +(Math.PI * (radius * radius)).toFixed(2),
         calculatePerimeter: (radius) => +(2 * Math.PI * radius).toFixed(2),
         fetchValuePrompt: () => "Enter Radius",
-        appendResultsToDom: function(dimensionValue) {
-            const area = this.calculateArea(dimensionValue);
-            const perimeter = this.calculatePerimeter(dimensionValue);
+        appendResultsToDom: () => {
             // Assigning the specific formulas, etc in the result container
             resultDimensionText.innerText = "RADIUS";
             resultDimensionSymbol.innerText = "r";
-            resultDimensionValue.innerText = dimensionValue + "cm";
             areaFormulaElement.innerHTML = `πr<sup class="text-small">2</sup>`;
-            areaValueElement.innerText = area + " sq cm";
             perimeterFormulaElement.innerText = "2πr";
-            perimeterValueElement.innerText = perimeter + " cm";
         }
     },
+
     square: {
         calculateArea: (side) => +(side * side).toFixed(2),
         calculatePerimeter: (side) => +(4 * side).toFixed(2),
         fetchValuePrompt: () => "Enter Side",
-        appendResultsToDom: function(dimensionValue) {
-            const area = this.calculateArea(dimensionValue);
-            const perimeter = this.calculatePerimeter(dimensionValue);
+        appendResultsToDom: () => {
             resultDimensionText.innerText = "SIDE";
             areaFormulaElement.innerHTML = "s * s";
             resultDimensionSymbol.innerText = "s";
-            resultDimensionValue.innerText = dimensionValue + " cm";
-            areaValueElement.innerText = area + " sq cm";
             perimeterFormulaElement.innerText = "4 * s";
-            perimeterValueElement.innerText = perimeter + " cm";
         }
     },
     triangle: {
         calculateArea: (side) => +(0.433 * side * side).toFixed(2),
         calculatePerimeter: (side) => +(3 * side).toFixed(2),
         fetchValuePrompt: () => "Enter Side(Base and Height)",
-        appendResultsToDom: function(dimensionValue) {
-            const area = this.calculateArea(dimensionValue);
-            const perimeter = this.calculatePerimeter(dimensionValue);
+        appendResultsToDom: () => {
             resultDimensionText.innerText = "SIDE";
             resultDimensionSymbol.innerText = "s";
             areaFormulaElement.innerHTML = "0.433 * s * s";
-            resultDimensionValue.innerText = dimensionValue + "cm";
-            areaValueElement.innerText = area + " sq cm";
             perimeterFormulaElement.innerText = "3 * s";
-            perimeterValueElement.innerText = perimeter + " cm";
         }
     }
 }
 
-// DOM Elements
-const shapeListItems = document.getElementsByClassName("shapes-list-item");
-const shapeSectionButton = document.getElementById("shapes-section-button");
+// Function to fetch the value from the input and modify the dom
+
+const fetchInputAndModifyDom = (event) => {
+    if (event.type === "keydown" && parseInt(event.keyCode) != 13) {
+        return; // if keydown event was fired
+    }
+    const inputValue = parseFloat(dimensionValueInput.value);
+    dimensionValueInput.value = ""; // resetting the value of the input
+    if (!inputValue || typeof(inputValue) != "number" || inputValue < 0) { // checking if the entered input is valid
+        return;
+    }
+    shapeContainer.setAttribute("class", `shapes-${currentShape}`); // adding the needed shape into the section
+    shapeValueSection.style.display = "none";
+    document.getElementById("shape-name").innerText = currentShape.charAt(0).toUpperCase() + currentShape.slice(1);
+    shapesObject[currentShape].appendResultsToDom();
+    resultDimensionValue.innerText = inputValue;
+    areaValueElement.innerText = shapesObject[currentShape].calculateArea(inputValue);
+    perimeterValueElement.innerText = shapesObject[currentShape].calculatePerimeter(inputValue);
+    calculationResultSection.style.display = "flex";
+}
+
+// Section DOM Elements
+const shapeSection = document.getElementById("shapes");
+const shapeValueSection = document.getElementById("shape-value");
+const calculationResultSection = document.getElementById("shape-calculation-results");
+
+// Shapes List DOM Element
+const shapeListItems = shapeSection.querySelectorAll(".shapes-list-item");
+
+// Button DOM Elementa
+const shapeSectionButton = shapeSection.querySelector("#shapes-section-button");
+const dimensionSectionButton = shapeValueSection.querySelector(".section-button");
+const resultSectionButton = calculationResultSection.querySelector(".section-button");
+
+// Value Promopt DOM Elements
+const valuePromptText = document.getElementById("value-prompt-text");
+const dimensionValueInput = document.getElementById("dimension-input");
 const resultDimensionText = document.getElementById("dimension-text");
 const resultDimensionSymbol = document.getElementById("dimension-symbol");
 const resultDimensionValue = document.getElementById("dimension-value");
@@ -62,6 +82,9 @@ const areaFormulaElement = document.getElementById("area-formula-text");
 const areaValueElement = document.getElementById("area-value");
 const perimeterFormulaElement = document.getElementById("perimeter-formula-text");
 const perimeterValueElement = document.getElementById("perimeter-value");
+
+// Container Elements
+const shapeContainer = document.getElementById("shape-container");
 
 let prevTickedElement = null; // last checked element
 let currentShape = "";
@@ -87,31 +110,18 @@ for (let shape of shapeListItems) {
 
 // Event Listener for Shape section Button
 shapeSectionButton.addEventListener("click", () => {
-    document.querySelector(".shapes").style.display = "none"; // hiding the current section
+    shapeSection.style.display = "none"; // hiding the current section
     prevTickedElement.classList.remove("tick-mark"); // removing the tickmark on the last checked item
-    document.getElementById("value-prompt-text").innerText = shapesObject[currentShape].fetchValuePrompt();
-    document.querySelector(".shape-value").style.display = "flex"; // making the next section visible
+    valuePromptText.innerText = shapesObject[currentShape].fetchValuePrompt();
+    shapeValueSection.style.display = "flex"; // making the next section visible
 });
 
 // Event Listener for Dimension section Button
-document.getElementById("dimension-section-button").addEventListener("click", () => {
-    const inputElement = document.getElementById("dimension-input");
-    const inputValue = parseFloat(inputElement.value);
-    inputElement.value = ""; // resetting the value of the input
-    if (!inputValue || typeof(inputValue) != "number") { // checking if the entered input is valid
-        return;
-    }
-    const resultSection = document.querySelector(".shape-calculation-results");
-    const shapeContainer = document.getElementById("shape-container");
-    shapeContainer.setAttribute("class", `shapes-${currentShape}`); // adding the needed shape into the section
-    document.querySelector(".shape-value").style.display = "none";
-    document.getElementById("shape-name").innerText = currentShape.charAt(0).toUpperCase() + currentShape.slice(1);
-    shapesObject[currentShape].appendResultsToDom(inputValue);
-    resultSection.style.display = "flex";
-});
+dimensionSectionButton.addEventListener("click", fetchInputAndModifyDom);
+shapeValueSection.addEventListener("keydown", fetchInputAndModifyDom);
 
 // Even Listener for Result section Button
-document.getElementById("result-section-button").addEventListener("click", () => {
-    document.querySelector(".shape-calculation-results").style.display = "none";
-    document.querySelector(".shapes").style.display = "flex";
+resultSectionButton.addEventListener("click", () => {
+    calculationResultSection.style.display = "none";
+    shapeSection.style.display = "flex";
 })

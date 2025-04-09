@@ -52,10 +52,13 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.22rem;
-    font-weight: 700;
     padding: 0.2rem 2rem 0;
     letter-spacing: 1.1px;
+}
+
+.header-app-name, .header-app-info{
+    font-size: 1.22rem;
+    font-weight: 700;
 }
 
 /* Header section ending */
@@ -87,9 +90,6 @@ section{
     background-color: transparent;
     border: 1.5px solid var(--white);
     border-radius: 5px;
-}
-
-.section-button-text{
     color: var(--white);
     font-size: 1.5rem;
 }
@@ -196,21 +196,22 @@ section{
     padding-top: 1.2rem;
 }
 
-.spacer{
-    height: 2rem;
+#shape-container{
+    margin-bottom: 2rem;
 }
 
 .result-container-wrapper{
     margin-bottom: 4.05rem;
+    border-collapse: collapse;
 }
 
 .result-container{
     display: flex;
     height: 2.8rem;
-    margin: 1.1rem 0;
+    margin: 1.15rem 0;
 }
 
-.result-container > div{
+.result-container > td{
     display: flex;
     align-items: center;
     font-weight: 300;
