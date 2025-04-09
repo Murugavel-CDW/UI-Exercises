@@ -6000,36 +6000,32 @@ const friendsList = [{
 }
 ];
 
+// Template Element
+const templateElement = document.createElement("template");
+templateElement.innerHTML = `
+    <div class="friends-list-container">
+        <div class="friend-list-item">
+            <img src="" alt="profile-image" class="profile-image">
+            <div class="profile-info-container">
+                <p class="user-name"></p>
+                <p class="user-email"></p>
+            </div>
+        </div>
+    </div>
+`;
+
 // Outermost container
 const friendsListContainer = document.createElement("div");
 friendsListContainer.setAttribute("class", "friends-list-container");
-document.querySelector("main").appendChild(friendsListContainer);
 
 // Iterating over the friends object array
 for (const friendObj of friendsList) {
     const fullName = friendObj.first_name + " " + friendObj.last_name;
-
-    const friendListItem = document.createElement("div"); // friend list item container
-    friendListItem.setAttribute("class", "friend-list-item");
-
-    const profileContainer = document.createElement("div"); // profile container
-    profileContainer.setAttribute("class", "profile-info-container");
-
-    const profileImageElement = document.createElement("img"); // profile image 
-    profileImageElement.setAttribute("src", friendObj.img);
-    profileImageElement.setAttribute("alt", "profile-image");
-    profileImageElement.setAttribute("class", "profile-image");
-
-    const userNameElement = document.createElement("p"); // profile name
-    userNameElement.innerText = fullName;
-    userNameElement.setAttribute("class", "user-name");
-
-    const userEmailElement = document.createElement("p"); // profile email
-    userEmailElement.innerText = friendObj.email;
-    userEmailElement.setAttribute("class", "user-email");
-
-    profileContainer.append(userNameElement, userEmailElement);
-
-    friendListItem.append(profileImageElement, profileContainer);
-    friendsListContainer.appendChild(friendListItem); // appending the item to the outermost container
+    const clonedFriendItem = templateElement.content.cloneNode(true);
+    clonedFriendItem.querySelector(".profile-image").setAttribute("src", friendObj.img);
+    clonedFriendItem.querySelector(".user-name").innerText = fullName;
+    clonedFriendItem.querySelector(".user-email").innerText = friendObj.email;
+    friendsListContainer.appendChild(clonedFriendItem);
 }
+
+document.querySelector("main").appendChild(friendsListContainer);
