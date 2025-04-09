@@ -52,6 +52,8 @@ body{
     flex-wrap: wrap;
 }
 
+/* Friends list item beginning */
+
 .friend-list-item{
     width: 31.49rem;
     display: flex;
@@ -87,5 +89,7 @@ body{
     font-size: 0.9rem;
     font-weight: 300;
 }
+
+/* Friends list item ending */
 
 /* Main section ending */

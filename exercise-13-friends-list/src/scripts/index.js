@@ -6021,11 +6021,11 @@ friendsListContainer.setAttribute("class", "friends-list-container");
 // Iterating over the friends object array
 for (const friendObj of friendsList) {
     const fullName = friendObj.first_name + " " + friendObj.last_name;
-    const clonedFriendItem = templateElement.content.cloneNode(true);
+    const clonedFriendItem = templateElement.content.cloneNode(true); // creating a copy of the node
     clonedFriendItem.querySelector(".profile-image").setAttribute("src", friendObj.img);
     clonedFriendItem.querySelector(".user-name").innerText = fullName;
     clonedFriendItem.querySelector(".user-email").innerText = friendObj.email;
-    friendsListContainer.appendChild(clonedFriendItem);
+    friendsListContainer.appendChild(clonedFriendItem); // appending the node to the container
 }
 
 document.querySelector("main").appendChild(friendsListContainer);
