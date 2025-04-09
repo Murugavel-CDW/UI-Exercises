@@ -6000,10 +6000,12 @@ const friendsList = [{
 }
 ];
 
+// Outermost container
 const friendsListContainer = document.createElement("div");
 friendsListContainer.setAttribute("class", "friends-list-container");
 document.querySelector("main").appendChild(friendsListContainer);
 
+// Iterating over the friends object array
 for (const friendObj of friendsList) {
     const fullName = friendObj.first_name + " " + friendObj.last_name;
 
@@ -6013,11 +6015,21 @@ for (const friendObj of friendsList) {
     const profileContainer = document.createElement("div"); // profile container
     profileContainer.setAttribute("class", "profile-info-container");
 
-    const profileImageElement = `<img src="${friendObj.img}" alt="profile-image" class="profile-image">`;
-    const userNameElement = `<p class="user-name">${fullName}</p>`;
-    const userEmailElement = `<p class="user-email">${fullName}</p>`;
+    const profileImageElement = document.createElement("img"); // profile image 
+    profileImageElement.setAttribute("src", friendObj.img);
+    profileImageElement.setAttribute("alt", "profile-image");
+    profileImageElement.setAttribute("class", "profile-image");
+
+    const userNameElement = document.createElement("p"); // profile name
+    userNameElement.innerText = fullName;
+    userNameElement.setAttribute("class", "user-name");
+
+    const userEmailElement = document.createElement("p"); // profile email
+    userEmailElement.innerText = friendObj.email;
+    userEmailElement.setAttribute("class", "user-email");
+
     profileContainer.append(userNameElement, userEmailElement);
 
     friendListItem.append(profileImageElement, profileContainer);
-    friendsListContainer.appendChild(friendListItem);
+    friendsListContainer.appendChild(friendListItem); // appending the item to the outermost container
 }
