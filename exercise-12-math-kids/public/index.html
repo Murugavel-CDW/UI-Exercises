@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontawesome external stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- External stylesheet -->
+     <link rel="stylesheet" href="../src/styles/styles.css">
+    <title>Math Kids</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-app-name">MATH KIDS</p>
+        <h2 class="header-app-info">KIDS LEARNING APP</h2>
+    </header>
+    
+    <main class="main">
+        <!-- Shapes section beginning -->
+        <section class="shapes" id="shapes">
+            <h2 class="section-info-text">1. Choose a Shape</h2>
+            <div class="shapes-list-container">
+                <div class="shapes-list-item shapes-circle" id="circle">
+                    <div class="tick-mark-circle"></div>
+                </div>
+                <div class="shapes-list-item shapes-triangle" id="triangle">
+                    <div class="tick-mark-triangle"></div>
+                </div>
+                <div class="shapes-list-item shapes-square" id="square">
+                    <div class="tick-mark-square"></div>
+                </div>
+                <div class="shapes-list-item shapes-triangle" id="rectangle">
+                    <div class="tick-mark-triangle"></div>
+                </div>
+            </div>
+            <button class="section-button" id="shapes-section-button">NEXT</button>
+        </section>
+        <!-- Shapes section ending -->
+    
+        <!-- Shapes value input  beginning -->
+        <section class="shape-value" id="shape-value">
+            <h2 class="section-info-text">2. <span id="value-prompt-text"></span></h2>
+            <input type="number" name="dimension" id="dimension-input" class="shape-value-input">
+            <button class="section-button">CALCULATE</button>
+        </section>
+        <!-- Shapes value input section ending -->
+    
+        <!-- Calculation result section beginning -->
+        <section class="shape-calculation-results" id="shape-calculation-results">
+            <div id="shape-container">
+            </div>
+            <h2 class="section-info-text" id="shape-name"></h2>
+            <!-- Result containers to display -->
+            <table class="result-container-wrapper">
+                <tr class="result-container">
+                    <td class="result-heading"></td>
+                    <td class="result-formula"></td>
+                    <td class="result-value"><span></span> cm</td>
+                </tr>
+                <tr class="result-container">
+                    <td class="result-heading">AREA</td>
+                    <td class="result-formula"></td>
+                    <td class="result-value"><span></span> sq cm</td>
+                </tr>
+                <tr class="result-container">
+                    <td class="result-heading">PERIMETER</td>
+                    <td class="result-formula"></td>
+                    <td class="result-value"><span></span> cm</td>
+                </tr>
+            </table>
+            <button class="section-button">START AGAIN</button>
+        </section>
+        <!-- Calculation result section ending -->
+    </main>
+    <!-- External JS scripts -->
+    <script src="../src/scripts/index.js"></script>
+</body>
+</html>
