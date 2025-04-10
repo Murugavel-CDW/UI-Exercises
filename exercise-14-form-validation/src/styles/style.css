@@ -1,0 +1,61 @@
+/* Global variables */
+
+:root{
+    --body-background: #f5f5f5;
+    --white: #fff;
+    --button-background: #001b71;
+    --dense-blue: #001c72;
+    --black: #000;
+}
+
+/* Resetting default styles */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles for font */
+
+body{
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: var(--body-background);
+}
+
+/* Header section beginning */
+
+/* .header{
+} */
+
+.logo{
+    width: 17rem;
+    height: 17rem;
+    position: absolute;
+    top: -71.5px;
+}
+
+/* Header section ending */
+
+/* Main section beginning */
+
+.main{
+    margin-top: 10rem;
+    padding-right: 0.23rem;
+}
+
+/* Form beginning */
+
+.input-form{
+    width: 38.89rem;
+    background-color: var(--white);
+    border: 1px solid black;
+    padding: 2.28rem;
+    /* box-shadow: ; */
+}
+
+/* Form ending */
+
+/* Main section ending */
