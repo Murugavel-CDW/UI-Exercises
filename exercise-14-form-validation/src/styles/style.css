@@ -85,6 +85,7 @@ body{
 .form-row-container{
     display: flex;
     justify-content: space-between;
+    column-gap: 1.2rem;
     margin-top: 1rem;
     margin-bottom: 1.15rem;
 }
@@ -93,16 +94,12 @@ body{
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    row-gap: 0.2rem;
 }
 
 .label-text{
     font-size: 0.7rem;
     font-weight: 500;
-    margin-bottom: 0.2rem;
-}
-
-.spacer{
-    width: 1.2rem;
 }
 
 input{
@@ -131,7 +128,7 @@ input{
     color: var(--red);
     font-size: 0.7rem;
     font-weight: 350;
-    margin-top: 0.3rem;
+    padding-top: 0.1rem;
 }
 
 /* Form ending */
