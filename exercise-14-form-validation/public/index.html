@@ -16,7 +16,7 @@
 
     <!-- Main section beginning -->
     <main class="main">
-        <form action="" class="input-form">
+        <form action="" class="input-form" id="form">
             <h2 class="form-group-header">BILLING DETAILS</h2>
             
             <!-- Individual form row -->
@@ -26,6 +26,7 @@
                     <input type="text" name="first-name" id="first-name">
                     <p class="error-text"></p>
                 </div>
+                <div class="spacer"></div>
                 <div class="label-input-container">
                     <label for="" class="label-text">Last Name</label>
                     <input type="text" name="last-name" id="last-name">
@@ -69,10 +70,11 @@
 
             <div class="form-row-container">
                 <div class="label-input-container">
-                    <label for="" class="label-text">Card Expiry(Year)</label>
+                    <label for="" class="label-text">Card Expiry (Year)</label>
                     <input type="number" name="expiry-year" id="expiry-year">
                     <p class="error-text"></p>
                 </div>
+                <div class="spacer"></div>
                 <div class="label-input-container">
                     <label for="" class="label-text">CVV</label>
                     <input type="number" name="cvv-number" id="cvv-number">
@@ -85,5 +87,6 @@
         </form>
     </main>
     <!-- Main section ending -->
+     <script src="../src/scripts/index.js"></script>
 </body>
 </html>
