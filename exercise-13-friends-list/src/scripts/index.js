@@ -6,7 +6,9 @@ const createCard = (fullName, email, imageSrc) => {
     const cardElement = document.createElement("div");
     cardElement.setAttribute("class", "friend-list-item");
     cardElement.innerHTML = `
-        <img src="${imageSrc}" alt="profile-image" class="profile-image">
+        <div class="profile-image-container">
+            <img src="${imageSrc}" alt="profile-image" class="profile-image">
+        </div>
         <div class="profile-info-container">
             <p class="user-name">${fullName}</p>
             <p class="user-email">${email}</p>
