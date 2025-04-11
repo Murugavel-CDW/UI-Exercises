@@ -1,6 +1,6 @@
 import {friendsList} from "./data.js";
 
-// Template Element
+// Card Element
 
 const createCard = (fullName, email, imageSrc) => {
     const cardElement = document.createElement("div");
