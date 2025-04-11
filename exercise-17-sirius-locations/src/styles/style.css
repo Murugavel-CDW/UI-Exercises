@@ -1,0 +1,133 @@
+/* Global variables */
+
+:root{
+    --body-background: #f5f5f5;
+    --white: #fff;
+    --button-background: #001b71;
+    --dimmer-blue: #818dba;
+    --odd-row-color: #eeeeee;
+    --even-row-color: #f2d9f7;
+    --light-black: #222222;
+    --black: #000;
+}
+
+/* Hiding scrollbar */
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Resetting default styles */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Font styles and body background */
+
+body{
+    background-color: var(--body-background);
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Common styles beginning */
+
+img{
+    width: 100%;
+    object-fit: contain;
+}
+
+/* Common styles ending */
+
+/* Header section beginning */
+
+.header{
+    position: relative;
+    display: flex;
+    height: 6rem;
+    justify-content: center;
+}
+
+.logo-wrapper{
+    width: 17.8rem;
+    height: 17.8rem;
+    position: absolute;
+    top: -44px;
+    z-index: -1;
+}
+
+/* Header section ending */
+
+/* Main section beginning */
+
+.main{
+    margin-top: 4.5rem;
+    padding-right: 0.1rem;
+}
+
+.content-wrapper{
+    width: 39.6rem;
+    margin: auto;
+}
+
+.tabs-container{
+    display: flex;
+    list-style: none;
+    margin-left: 1.5rem;
+}
+
+.navigation-tab{
+    background-color: var(--button-background);
+    margin: 0 0.25rem;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 4px 4px 0 0;
+}
+
+.navigation-link{
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    font-weight: 550;
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* Cards section common styles */
+
+.section-card{
+    background-color: var(--white);
+    padding: 2rem;
+    height: 35rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    overflow-y: scroll;
+}
+
+/* About us section beginning */
+
+.info-text{
+    font-size: 0.793rem;
+    line-height: 1.2rem;
+    color: var(--light-black);
+}
+
+.image-wrapper{
+    margin-top: 1.6rem;
+}
+
+/* About us section ending */
+
+/* Solutions section beginning */
+
+
+
+/* Solutions section ending */
+
+/* Main section ending */
+
+/* Pseudo class styles */
+
+.navigation-button:hover{
+    cursor: pointer;
+}
