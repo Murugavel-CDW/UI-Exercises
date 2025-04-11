@@ -94,6 +94,10 @@ img{
     text-decoration: none;
 }
 
+.ui-tabs-active{
+    background-color: var(--black);
+}
+
 /* Cards section common styles */
 
 .section-card{
