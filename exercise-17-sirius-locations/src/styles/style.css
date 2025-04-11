@@ -35,8 +35,8 @@ body{
 /* Common styles beginning */
 
 img{
+    height: 100%;
     width: 100%;
-    object-fit: contain;
 }
 
 /* Common styles ending */
@@ -54,7 +54,7 @@ img{
     width: 17.8rem;
     height: 17.8rem;
     position: absolute;
-    top: -44px;
+    top: -77px;
     z-index: -1;
 }
 
@@ -63,7 +63,7 @@ img{
 /* Main section beginning */
 
 .main{
-    margin-top: 4.5rem;
+    margin-top: 4.4rem;
     padding-right: 0.1rem;
 }
 
@@ -75,13 +75,13 @@ img{
 .tabs-container{
     display: flex;
     list-style: none;
-    margin-left: 1.5rem;
+    margin-left: 1.45rem;
 }
 
 .navigation-tab{
-    background-color: var(--button-background);
-    margin: 0 0.25rem;
-    padding: 0.5rem 1.5rem;
+    background-color: var(--black);
+    margin: 0 0.4rem;
+    padding: 0.5rem 1.7rem;
     border: none;
     border-radius: 4px 4px 0 0;
 }
@@ -95,40 +95,134 @@ img{
 }
 
 .ui-tabs-active{
-    background-color: var(--black);
+    background-color: var(--button-background);
 }
 
 /* Cards section common styles */
 
 .section-card{
     background-color: var(--white);
+    margin-left: 0.23rem;
     padding: 2rem;
+    padding-top: 1.71rem;
     height: 35rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     overflow-y: scroll;
+}
+
+.solutions-wrapper, .locations-wrapper{
+    padding: 1.57rem 1.63rem;
 }
 
 /* About us section beginning */
 
 .info-text{
     font-size: 0.793rem;
-    line-height: 1.2rem;
+    line-height: 1.21rem;
     color: var(--light-black);
 }
 
 .image-wrapper{
-    margin-top: 1.6rem;
+    margin-top: 1.5rem;
+    height: 15.1rem;
 }
 
 /* About us section ending */
 
 /* Solutions section beginning */
 
+.accordion-header-title{
+    position: relative;
+    background-color: var(--dimmer-blue);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.6rem 0;
+    padding-left: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+    margin-bottom: 0.6rem;
+}
 
+.accordion-info-container{
+    padding: 0.82rem 1.05rem;
+    margin-bottom: 0.6rem;
+    border: 1px solid var(--dimmer-blue);
+}
+
+.accordion-info-text{
+    font-size: 0.66rem;
+    color: var(--light-black);
+}
 
 /* Solutions section ending */
 
+/* Locations section beginning */
+
+.locations-info-row{
+    display: grid;
+    padding: 0.4rem 0;
+    align-items: center;
+    padding-left: 0.8rem;
+    padding-right: 1.25rem;
+    grid-template-columns: 0.47fr 1.12fr 0.9fr 1fr;
+    margin-bottom: 0.6rem;
+}
+
+.locations-info-row:nth-child(odd){
+    background-color: var(--odd-row-color);
+}
+
+.locations-info-row:nth-child(even){
+    background-color: var(--even-row-color);
+}
+
+.location-info-text{
+    font-size: 0.7rem;
+}
+
+.locations-info-row > .location-info-text:last-of-type{
+    justify-self: end;
+}
+
+.country-image-container{
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.country-image-container > img{
+    border-radius: 50%;
+}
+
+/* Locations section ending */
+
 /* Main section ending */
+
+/* Setting the dropdown arrows in accordion */
+
+.accordion-header-title::before {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    width: 0.3rem;
+    height: 0.3rem;
+    border-right: 2px solid var(--white);
+    border-bottom: 2px solid var(--white);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+    rotate: -45deg;
+}
+
+/* Rotate arrow down when active */
+.ui-accordion-header-active.accordion-header-title::before {
+    top: 43%;
+    rotate: 45deg;
+}
+
+.ui-accordion-header-active{
+    margin-bottom: 0;
+}
 
 /* Pseudo class styles */
 
