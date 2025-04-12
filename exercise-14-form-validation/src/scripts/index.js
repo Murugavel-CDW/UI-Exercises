@@ -5,11 +5,11 @@ const buttonElement = document.querySelector(".form-submit-button");
 // Regex expressions
 const nameRegex = /^[a-zA-z]{1,30}$/;
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-const mobileRegex = /\d{10}/;
-const pinCodeRegex = /\d{6}/;
-const cardNumberRegex = /\d{16}/;
-const expiryYearRegex = /\d{4}/;
-const cvvRegex = /\d{3,4}/;
+const mobileRegex = /\^d{10}$/;
+const pinCodeRegex = /^\d{6}$/;
+const cardNumberRegex = /^\d{16}$/;
+const expiryYearRegex = /^\d{4}$/;
+const cvvRegex = /^\d{3,4}$/;
 
 // Input DOM Elements
 const formInputs = formElement.querySelectorAll("input");
@@ -32,8 +32,10 @@ const resetTexts = () => {
 }
 
 // Function to display the error text
-const displayErrorText = (errorText, errorMessage) => {
+const displayErrorText = (inputElement, errorMessage) => {
+    const errorText = inputElement.nextElementSibling;
     errorText.innerText = errorMessage;
+    highlightInput(inputElement);
 }
 
 // Function to highlight input that has an error
@@ -43,111 +45,91 @@ const highlightInput = (inputElement) => {
 
 // Validation functions
 const validateName = (name, nameType, nameInput) => {
-    const errorText = nameInput.nextElementSibling;
     if (!name || name.length == 0) {
-        displayErrorText(errorText, `${nameType} is required`);
-        highlightInput(nameInput);
+        displayErrorText(nameInput, `${nameType} is required`);
         return false;
     }
     const isValid = nameRegex.test(name);
     if (!isValid) {
-        displayErrorText(errorText, `${nameType} is not valid`);
-        highlightInput(nameInput);
+        displayErrorText(nameInput, `${nameType} is not valid`);
     }
     return isValid;
 }
 
 const validateEmail = (email) => {
-    const errorText = emailInput.nextElementSibling;
     if (!email || email.length == 0) {
-        displayErrorText(errorText, `Email is required`);
-        highlightInput(emailInput);
+        displayErrorText(emailInput, `Email Address is required`);
         return false;
     }
     const isValid = emailRegex.test(email);
     if (!isValid) {
-        displayErrorText(errorText, `Email is invalid`);
-        highlightInput(emailInput);
+        displayErrorText(emailInput, `Email Address is invalid`);
     }
     return isValid;
 }
 
 const validateMobileNumber = (mobileNumber) => {
-    const errorText = contactNumberInput.nextElementSibling;
     if (!mobileNumber) {
-        displayErrorText(errorText, `Contact Number is required`);
-        highlightInput(contactNumberInput);
+        displayErrorText(contactNumberInput, `Contact Number is required`);
         return false;
     }
     const isValid = mobileRegex.test(mobileNumber);
     if (!isValid || mobileNumber < 0) {
-        displayErrorText(errorText, `Contact Number is invalid`);
-        highlightInput(contactNumberInput);
+        displayErrorText(contactNumberInput, `Contact Number is invalid`);
     }
     return isValid;
 }
 
 const validatePinCode = (pinCode) => {
-    const errorText = pinCodeInput.nextElementSibling;
     if (!pinCode) {
-        displayErrorText(errorText, `PIN Code is required`);
-        highlightInput(pinCodeInput);
+        displayErrorText(pinCodeInput, `PIN Code is required`);
         return false;
     }
     const isValid = pinCodeRegex.test(pinCode);
     if (!isValid || pinCode < 0) {
-        displayErrorText(errorText, `PIN Code is invalid`);
-        highlightInput(pinCodeInput);
+        displayErrorText(pinCodeInput, `PIN Code is invalid`);
     }
     return isValid;
 }
 
 const validateCard = (cardNumber) => {
-    const errorText = cardNumberInput.nextElementSibling;
     if (!cardNumber) {
-        displayErrorText(errorText, `Card Number is required`);
-        highlightInput(cardNumberInput);
+        displayErrorText(cardNumberInput, `Card Number is required`);
         return false;
     }
     const isValid = cardNumberRegex.test(cardNumber);
     if (!isValid || cardNumber < 0) {
-        displayErrorText(errorText, `Card Number is invalid`);
-        highlightInput(cardNumberInput);
+        displayErrorText(cardNumberInput, `Card Number is invalid`);
     }
     return isValid;
 }
 
 const validateExpiryYear = (expiryYear) => {
-    const errorText = expiryYearInput.nextElementSibling;
     const currentYear = new Date().getFullYear();
     if (!expiryYear) {
-        displayErrorText(errorText, `Card Expiry is required`);
-        highlightInput(expiryYearInput);
+        displayErrorText(expiryYearInput, `Card Expiry is required`);
         return false;
     }
     const isValid = expiryYearRegex.test(expiryYear);
     if (!isValid || expiryYear < 0 || expiryYear < currentYear) {
-        displayErrorText(errorText, `Card Expiry is invalid`);
-        highlightInput(expiryYearInput);
+        displayErrorText(expiryYearInput, `Card Expiry is invalid`);
     }
     return isValid;
 }
 
 const validateCVV = (cvvNumber) => {
-    const errorText = cvvNumberInput.nextElementSibling;
     if (!cvvNumber) {
-        displayErrorText(errorText, `CVV is required`);
-        highlightInput(cvvNumberInput);
+        displayErrorText(cvvNumberInput, `CVV is required`);
         return false;
     }
     const isValid = cvvRegex.test(cvvNumber);
     if (!isValid || cvvNumber < 0) {
-        displayErrorText(errorText, `CVV is invalid`);
-        highlightInput(cvvNumberInput);
+        displayErrorText(cvvNumberInput, `CVV is invalid`);
     }
     return isValid;
 }
 
+// Function to validate the form
 const validateForm = () => {
     let allFieldsValid = true;
     resetTexts();
