@@ -1,0 +1,189 @@
+/* Global variables */
+
+:root{
+    --black: #000;
+    --white: #fff;
+}
+
+/* Resetting default styles */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Body background image and Font styles */
+
+body{
+    background: no-repeat url("../assets/images/background-image.png");
+    background-size: cover;
+    color: var(--white);
+    font-family: sans-serif;
+}
+
+/* Overlay styles */
+
+.overlay{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: -1;
+}
+
+/* Header section beginning */
+
+.header{
+    margin-top: 2.91rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.header-title{
+    font-size: 4.7rem;
+    font-weight: 550;
+}
+
+.header-title-additional-info{
+    transform: rotate(-90deg);
+    font-size: 2.6rem;
+    font-weight: 550;
+    position: absolute;
+    right: -108px;
+    top: 139px;
+}
+
+.additional-info-bigger-text{
+    font-size: 7.5rem;
+    font-weight: 700;
+}
+
+/* Header menu and options beginning */
+
+.menu-container{
+    height: 5.6rem;
+    width: 5.62rem;
+    background-color: var(--black);
+    position: absolute;
+    display: grid;
+    place-items: center;
+    left: 0;
+    top: -2px;
+}
+
+.menu-icon{
+    font-size: 1.8rem;
+}
+
+.menu-options-container{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 0;
+    overflow: hidden;
+    padding-top: 0.1rem;
+    background-color: var(--black);
+    border-radius: 0 1.8rem 1.8rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hat-image-container{
+    padding-top: 2.7rem;
+    width: 6.27rem;
+}
+
+.hat-image{
+    width: 100%;
+}
+
+.hat-options-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.93rem;
+    margin-bottom: 1.3rem;
+    white-space: nowrap;
+}
+
+.hat-options-list-item{
+    margin: 0.72rem 0;
+    font-size: 1.28rem;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: 300;
+}
+
+/* Header menu and options ending */
+
+/* Header section ending */
+
+/* Main section beginning */
+
+.slogan-text{
+    position: fixed;
+    left: 34.05rem;
+    bottom: 60px;
+    width: 40rem;
+}
+
+.slogan-smaller-text{
+    font-size: 6.75rem;
+    line-height: 9.1rem;
+    font-weight: 550;
+}
+
+.slogan-bigger-text{
+    font-size: 8.95rem;
+    font-weight: 700;
+    line-height: 5.9rem;
+}
+
+/* Main section ending */
+
+/* Footer section beginning */
+
+.footer{
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    bottom: -16px;
+    right: 15px;
+}
+
+.social-icon{
+    margin: 0.2rem 0.6rem 1.27rem;
+}
+
+.social-icon-twitter{
+    font-size: 2.4rem;
+}
+
+.social-icon-facebook{
+    padding-top: 0.15rem;
+    font-size: 2rem;
+}
+
+/* Footer section ending */
+
+/* Pseudo class styles */
+
+.menu-container:hover > .menu-options-container, .menu-options-container:hover{
+    width: 16.87rem;
+    transition: width 1.5s ease-out;
+}
+
+.hat-options-list-item:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.social-icon:hover{
+    cursor: pointer;
+}
