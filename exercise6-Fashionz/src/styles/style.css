@@ -1,0 +1,247 @@
+/* Global variables */
+
+:root{
+    --primary-color: #2a2b30;
+    --secondary-color: #aaaaaa;
+    --profile-background: #d8d8d8;
+    --card-background: #24252a;
+    --options-background: #eeeeee;
+    --white: #ffff;
+    --light-green: #87b181;
+    --black: #000000;
+}
+
+/* Resetting styles */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Font styles */
+
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.text-medium{
+    font-size: 1.5rem;
+}
+
+/* Header section beginning */
+
+.header{
+    margin: 4.85rem 8.25rem 0rem 8.25rem;
+    padding: 0 0.7rem;
+    position: relative;
+}
+
+.header-logo{
+    width: 11.75rem;
+    height: 4.3rem;
+}
+
+.header-profile-icon{
+    position: absolute;
+    top: -12px;
+    right: -15px;
+    height: 4.2rem;
+    width: 4.2rem;
+    background-color: var(--profile-background);
+    border-radius: 50%;
+}
+
+.header-options-container{
+    display: none;
+}
+
+.header-options{
+    list-style: none;
+    width: 16.25rem;
+    height: 11.19rem;
+    background-color: var(--options-background);
+    color: var(--black);
+    padding-top: 1.64rem;
+}
+
+.header-options-text{
+    margin-bottom: 1.2rem;
+    margin-left: 1.65rem;
+    font-size: 1.04rem;
+    font-weight: 620;
+}
+
+.header-options-text:nth-child(2){
+    margin-bottom: 1.1rem;
+}
+
+.header-options-text:nth-last-child(2){
+    margin-bottom: 1rem;
+}
+
+.header-options-text:last-child{
+    margin-bottom: 0;
+}
+
+/* Header section ending */
+
+/* Main section beginning */
+
+.main{
+    margin: 1.46rem 0 9rem 7.44rem;
+}
+
+/* Item card beginning */
+
+.item{
+    display: inline-block;
+    margin: 1.8rem 1.48rem 1.73rem 1.48rem;
+}
+
+.item-info{
+    background-color: var(--card-background);
+    height: 25.73rem;
+    width: 20.4rem;
+    padding-top: 5.4rem;
+    padding-right: 0.5rem;
+    position: relative;
+}
+
+.item-image-container{
+    width: 15.2rem;
+    height: 15.5rem;
+    margin: auto;
+    text-align: center;
+}
+
+.item-image{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.item-wishlist-icon{
+    color: var(--light-green);
+    font-size: 1.3rem;
+    position: absolute;
+    top: 21.5px;
+    right: 22px;
+}
+
+.item-size{
+    height: 3.55rem;
+    width: 3.55rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 3.4rem;
+    background-color: var(--light-green);
+    color: var(--black);
+    position: absolute;
+    bottom: -28px;
+    right: 23px;
+}
+
+.item-size-text{
+    font-weight: 630;
+    padding-top: 0.2rem;
+}
+
+.item-name-price-container{
+    margin-top: 1rem;
+    margin-bottom: 0.87rem;
+}
+
+.item-name{
+    font-weight: 300;
+    font-size: 1.51rem;
+    margin-bottom: 0.2rem;
+}
+
+.item-price, .item-cart-button{
+    color: var(--secondary-color);
+}
+
+.item-price{
+    font-weight: 310;
+    font-size: 1.3rem;
+}
+
+.item-cart-button{
+    padding: 0.64rem 1.22rem;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Quicksand", sans-serif;
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+}
+
+/* Item card ending */
+
+/* Main section ending */
+
+/* Footer section beginning */
+
+.footer{
+    background-color: var(--black);
+    color: var(--white);
+    height: 7rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer-nav-list{
+    list-style: none;
+    width: 50%;
+    padding: 0 5.8rem;
+    margin: auto;
+}
+
+.footer-nav-item{
+    display: inline-block;
+    font-size: 1.45rem;
+    letter-spacing: 0.5px;
+    margin: 0 1.769rem;
+    font-weight: 600;
+    line-height: 112px;
+}
+
+
+/* Footer section ending */
+
+/* Pseudo class styles */
+
+.item-cart-button{
+    cursor: pointer;
+}
+
+.header-profile-icon:hover>.header-options{
+    display: block;
+    position: absolute;
+    list-style: none;
+    right: 1px;
+    top: 83.5px;
+    width: 16.25rem;
+    height: 11.19rem;
+    background-color: var(--options-background);
+    color: var(--black);
+    z-index: 100;
+    padding-top: 1.64rem;
+}
+
+.header-profile-icon:hover > .header-options-container, .header-options-container:hover{
+    display: block;
+    position: absolute;
+    padding-top: 3.5rem;
+    right: 1px;
+    top: 27.5px;
+    z-index: 100;
+}
+
+.footer-nav-item:hover, .header-options-text:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
