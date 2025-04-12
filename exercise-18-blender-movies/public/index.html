@@ -1,11 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External stylesheets from google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <!-- External stylesheets -->
+    <link rel="stylesheet" href="../src/styles/style.css">
     <title>Blender Movies</title>
 </head>
+
 <body>
-    
+    <!-- Header section beginning -->
+    <header class="header">
+        <h1 class="header-title fw-600">Blender Movies</h1>
+        <!-- Profile container -->
+        <div class="header-profile-container">
+            <p class="header-profile-name">Steff jerry</p>
+            <div class="profile-image-container">
+                <img src="../src/assets/images/user/profile-image.png" alt="Profile Image" class="profile-image">
+            </div>
+        </div>
+    </header>
+    <!-- Header section ending -->
+
+    <!-- Main section beginning -->
+    <main class="main">
+        <!-- Movie details container -->
+        <div class="movie-container">
+            <video class="movie-video" controls poster="../src/assets/images/video/thumbnail.png" id="video">
+                Your browser doesn't support this video
+            </video>
+
+            <section class="movie-info-container">
+                <h2 class="movie-title" id="movie-title"></h2>
+                <p class="movie-description fw-300" id="movie-description"></p>
+            </section>
+
+            <hr class="divider-line" />
+
+            <h2 class="comments-header fw-650" id="comments">Comments</h2>
+            <ul class="comments-section-list">
+                <!-- Individual comments -->
+                <li class="comments-section-list-item">
+                    <div class="commentator-image-container">
+                        <img src="../src/assets/images/reviewers/micheal.png" alt="Michael Scott image"
+                            class="commentator-image">
+                    </div>
+                    <div class="comment-info-container">
+                        <h3 class="commentator-name fw-600">Michale Scott</h3>
+                        <p class="comment-text fw-300">How often do people make a film where the main character
+                            kills the thing they were trying to rescue because they didn't recognize it? Not
+                            that often. This brought tears to my eyes.</p>
+                    </div>
+                </li>
+                <li class="comments-section-list-item">
+                    <div class="commentator-image-container">
+                        <img src="../src/assets/images/reviewers/dwight.png" alt="Michael Scott image"
+                            class="commentator-image">
+                    </div>
+                    <div class="comment-info-container">
+                        <h3 class="commentator-name fw-600">Dwight K Schrute (Asst. to the Regional Manager)</h3>
+                        <p class="comment-text fw-300">Breathtaking, I’ve only just begun my blender journey. Making something
+                            every day until I get to the point I can create something on this scale. Pretty amazing
+                            short story as well. Props all around to all involved in this great piece of work</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Movie list container -->
+        <div class="movie-list-container">
+            <h2 class="movie-list-header fw-650">Upcoming Projects</h2>
+            <div class="movie-list-container">
+                <!-- Movie list item -->
+                <div class="movie-list-image-container">
+                    <img src="https://ddz4ak4pa3d19.cloudfront.net/cache/56/62/5662bc2079ee7ffd491b65c29a360ac9.jpg"
+                        alt="Sprite Fight" class="movie-list-image">
+                </div>
+                <div class="movie-list-image-container">
+                    <img src="https://cdna.artstation.com/p/assets/covers/images/019/392/064/large/andy-goralczyk-agent-poster-street-small.jpg?1563288236"
+                        alt="Sprite Fight" class="movie-list-image">
+                </div>
+                <div class="movie-list-image-container">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Spring2019AlphaPosterBlender.jpg/1200px-Spring2019AlphaPosterBlender.jpg"
+                        alt="Sprite Fight" class="movie-list-image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat icon -->
+        <div class="chat-container">
+            <i class="fa-solid fa-comments chat-icon"></i>
+        </div>
+    </main>
+    <!-- Main section ending -->
+
+    <!-- Footer section beginning -->
+    <footer class="footer">
+        <p class="copyrights-text">&copy; Copyrights <span id="year-text">2022</span></p>
+        <p class="footer-text fw-600">Blender Movies</p>
+    </footer>
+    <!-- Footer section ending -->
+
+    <!-- Font awesome icon script -->
+    <script src="https://kit.fontawesome.com/1d71c5906f.js" crossorigin="anonymous"></script>
+    <!-- Jquery script -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- External scripts -->
+    <script type="module" src="../src/scripts/index.js"></script>
 </body>
+
 </html>

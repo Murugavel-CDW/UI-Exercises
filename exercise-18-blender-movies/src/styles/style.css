@@ -1,0 +1,222 @@
+/* Global variables */
+
+:root{
+    --greyish-white: #f5f5f5;
+    --pink: #c432ae;
+    --white: #fff;
+    --black: #000;
+    --light-black: #222222;
+}
+
+/* Resetting default styles */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Font styles and body background */
+
+body{
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--greyish-white);
+}
+
+/* Common styles beginning */
+
+.header, .footer{
+    padding: 0 17.38rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}
+
+.fw-300{
+    font-weight: 300;
+}
+
+.fw-600{
+    font-weight: 600;
+}
+
+.fw-650{
+    font-weight: 650;
+}
+
+/* Common styles ending */
+
+/* Header section beginning */
+
+.header{
+    background-color: var(--white);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+    position: sticky;
+    height: 3.9rem;
+    top: 0;
+    z-index: 1;
+}
+
+.header-title{
+    font-size: 1.2rem;
+}
+
+.header-profile-container{
+    display: flex;
+    column-gap: 0.43rem;
+    align-items: center;
+}
+
+.header-profile-name{
+    font-size: 0.7rem;
+}
+
+.profile-image-container{
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Header section ending */
+
+/* Main section beginning */
+
+.main{
+    padding: 0 17.38rem;
+    margin-top: 1.55rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.divider-line{
+    margin: 1.4rem 0;
+    opacity: 0.4;
+}
+
+/* Current video details section beginning */
+
+.movie-video{
+    width: 100%;
+}
+
+.movie-container{
+    flex: 2 2 22.1rem;
+    margin-right: 1.65rem;
+}
+
+.movie-title{
+    font-weight: 500;
+    margin: 0.57rem 0;
+}
+
+.movie-description{
+    font-size: 0.82rem;
+    padding-right: 1rem;
+}
+
+/* Comments section beginning */
+
+.comments-header{
+    font-size: 1.1rem;
+}
+
+.comments-section-list{
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.comments-section-list-item{
+    display: flex;
+    column-gap: 0.9rem;
+    margin-bottom: 1.3rem;
+}
+
+.commentator-image-container{
+    width: 3.2rem;
+    height: 3rem;
+    flex-shrink: 0;
+}
+
+.commentator-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.commentator-name{
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+}
+
+.comment-text{
+    font-size: 0.768rem;
+}
+
+/* Comments section ending */
+
+/* Current video details section beginning */
+
+/* Movies list section beginning */
+
+.movie-list-container{
+    flex: 1 1;
+}
+
+.movie-list-header{
+    font-size: 1.1rem;
+    margin-bottom: 0.55rem;
+}
+
+.movie-list-image-container{
+    margin-bottom: 0.9rem;
+}
+
+/* Movies list section ending */
+
+/* Main section ending */
+
+/* Footer section beginning */
+
+.footer{
+    height: 4.4rem;
+    background-color: var(--light-black);
+    color: var(--white);
+}
+
+.copyrights-text{
+    font-size: 0.97rem;
+}
+
+.footer-text{
+    font-size: 0.79rem;
+}
+
+/* Footer section ending */
+
+/* Chat icon beginning */
+
+.chat-container{
+    position: fixed;
+    bottom: 38px;
+    right: 37px;
+    height: 4rem;
+    width: 4rem;
+    background-color: var(--pink);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+}
+
+.chat-icon{
+    color: var(--white);
+    font-size: 1.7rem;
+}
+
+/* Chat icon ending */
+
+/* Media Queries */
