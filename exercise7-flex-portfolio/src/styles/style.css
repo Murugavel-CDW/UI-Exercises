@@ -3,6 +3,7 @@
 :root{
     --black: #000;
     --white: #fff;
+    --greyish-white: #cecece;
     --blue: #4b90e2;
     --green: #b8e986;
 }
@@ -33,15 +34,15 @@ body{
 /* Main section beginning */
 
 .main{
-    margin: 4.3rem 9.5rem 17.6rem 9.5rem;
+    margin: 4.2rem 9.5rem 17.4rem 9.5rem;
 }
 
 .email-desktop{
     align-self: flex-end;
-    font-size: 1.6rem;
-    margin-bottom: 7.8rem;
-    margin-right: 1.6rem;
-    font-weight: 500;
+    font-size: 1.76rem;
+    margin-bottom: 7.59rem;
+    padding-right: 1.66rem;
+    font-weight: 600;
 }
 
 .profile-info{
@@ -51,13 +52,25 @@ body{
 }
 
 .profile-info-name{
-    font-size: 10.9rem;
+    font-size: 11.1rem;
     font-weight: 300;
+    word-spacing: -0.4rem;
+}
+
+.extra-bold{
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.shrink{
+    letter-spacing: -2px;
 }
 
 .profile-info-tech{
     font-size: 3.3rem;
+    color: var(--greyish-white);
     font-weight: 500;
+    letter-spacing: 2.5px;
     margin-top: 0.5rem;
 }
 
@@ -71,13 +84,12 @@ body{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 7.75rem;
-    margin-bottom: 8.1rem;
+    margin: 8.75rem 0 8.96rem 0.1rem;
+    gap: 1.95rem 2.18rem;
 }
 
 .product-list-item-container{
     width: 27.08rem;
-    margin: 1.085rem;
 }
 
 .product-list-item{
@@ -90,24 +102,29 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
+    row-gap: 5.55rem;
 }
 
 .logos-section-header{
-    font-size: 2.92rem;
+    font-weight: 500;
+    font-size: 3.5rem;
+    color: var(--greyish-white);
+    letter-spacing: -0.08rem;
 }
 
 .logos-section-list{
-    width: 100%;
+    width: 100%; 
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 5.55rem;
+    gap: 1.7rem;
+    margin: 0.5rem 0;
 }
 
 .logos-section-list-container{
     width: 9.9rem;
-    margin: 0.5rem;
+    /* height: 5.4rem; */
 }
 
 .logos-section-list-spotify-image-container{
@@ -175,12 +192,12 @@ body{
     display: flex;
     width: 100%;
     justify-content: center;
-    /* justify-content: space-around; */
-    margin-bottom: 5rem;
+    margin-top: 0.7rem;
+    margin-bottom: 5.5rem;
+    gap: 0.59rem 1.2rem;
 }
 
 .footer-social-icon-container{
-    margin: 0.59rem 0.6rem;
     width: 3.22rem;
     height: 3.22rem;
     border-radius: 50%;
@@ -196,6 +213,8 @@ body{
 .footer-text{
     font-size: 1.36rem;
     font-weight: 500;
+    letter-spacing: 0.05rem;
+    word-spacing: 0.15rem;
 }
 
  /* Footer section ending */
@@ -218,7 +237,7 @@ body{
 
     .main{
         margin-top: 7.2rem;
-        margin-bottom: 7.5rem;
+        margin-bottom: 9.6rem;
     }
     
     /* Profile section beginning */
@@ -229,17 +248,30 @@ body{
 
     .profile-info-name{
         font-size: 3.74rem;
+        letter-spacing: 3px;
     }
 
     .profile-info-tech{
-        font-size: 2.27rem;
+        font-size: 2.4rem;
+        letter-spacing: 0;
         margin-top: 1.25rem;
+    }
+
+    .shrink{
+        all: unset;
+    }
+
+    .extra-bold{
+        letter-spacing: 2px;
     }
 
     .email-mobile{
         visibility: visible;
-        font-size: 1.15rem;
-        margin-top: 0.8rem;
+        font-size: 1.2rem;
+        margin-top: 0.75rem;
+        letter-spacing: 0.6px;
+        font-weight: 600;
+        color: var(--greyish-white);
     }
 
     /* Profile section ending */
@@ -247,31 +279,35 @@ body{
     /* Product list section beginning */
 
     .product-list{
-        margin-top: 7.1rem;
-        margin-bottom: 4.95rem;
+        margin: 7.6rem 0 5.5rem;
+        row-gap: 1.1rem;
     }
 
     .product-list-item-container{
-        margin: 0.58rem 1.4rem;
+        margin: 0 1.4rem;
     }
 
     /* Product list section ending */
 
     /* Logos section beginning */
 
+    .logos-section{
+        row-gap: 2rem;
+    }
+
     .logos-section-header{
-        font-size: 2.16rem;
+        font-size: 2.63rem;
     }
 
     .logos-section-list{
-        margin-top: 3.9rem;
-        margin-right: 0.5rem;
-        justify-content: space-around;
+        justify-content: center;
+        margin: 3.4rem 0;
+        column-gap: 6rem;
+        row-gap: 6rem;
     }
 
     .logos-section-list-container{
         width: 8.78rem;
-        margin: 2rem 2rem 3.5rem 2rem;
     }
 
     .logos-section-list-spotify-image-container{
@@ -303,12 +339,12 @@ body{
     /* Main section ending */
 
     .header-footer-divider-small{
-        width: 1.5rem;
+        width: 1.55rem;
         margin-right: 1.6rem;
     }
 
     .header-footer-divider-large{
-        width: 9.5rem;
+        width: 9.55rem;
         margin-right: 0.2rem;
     }
 
@@ -321,8 +357,8 @@ body{
     }
 
     .footer-social-list{
-        margin-bottom: 3.8rem;
-        column-gap: 0.4rem;
+        margin-bottom: 4.45rem;
+        column-gap: 1.575rem;
     }
 
     .footer-social-icon-container{
@@ -336,6 +372,8 @@ body{
 
     .footer-text{
         font-size: 1.67rem;
+        letter-spacing: 1.5px;
+        word-spacing: unset;
     }
 
     /* Footer section ending */
