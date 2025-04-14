@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External stylesheets from google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="../src/styles/style.css">
+    <title>Form Validation</title>
+</head>
+<body>
+    <img src="../src/assets/images/Sirius_CDW_Cobranded_PMS2747.svg" alt="Sirirus Logo" class="logo">
+
+    <!-- Main section beginning -->
+    <main class="main">
+        <form action="" class="input-form" id="form">
+            <h2 class="form-group-header">BILLING DETAILS</h2>
+            
+            <!-- Individual form row -->
+            <div class="form-row-container">
+                <div class="label-input-container">
+                    <label for="first-name" class="label-text">First Name</label>
+                    <input type="text" name="first-name" id="first-name">
+                    <p class="error-text"></p>
+                </div>
+                <div class="label-input-container">
+                    <label for="last-name" class="label-text">Last Name</label>
+                    <input type="text" name="last-name" id="last-name">
+                    <p class="error-text"></p>
+                </div>
+            </div>
+
+            <div class="form-row-container">
+                <div class="label-input-container">
+                    <label for="email-address" class="label-text">Email Address</label>
+                    <input type="email" name="email-address" id="email-address">
+                    <p class="error-text"></p>
+                </div>
+            </div>
+
+            <div class="form-row-container">
+                <div class="label-input-container">
+                    <label for="contact-number" class="label-text">Contact Number</label>
+                    <input type="number" name="contact-number" id="contact-number">
+                    <p class="error-text"></p>
+                </div>
+            </div>
+
+            <div class="form-row-container">
+                <div class="label-input-container">
+                    <label for="pin-code" class="label-text">PIN Code</label>
+                    <input type="number" name="pin-code" id="pin-code">
+                    <p class="error-text"></p>
+                </div>
+            </div>
+
+            <h2 class="form-group-header">PAYMENT DETAILS</h2>
+
+            <div class="form-row-container">
+                <div class="label-input-container">
+                    <label for="card-number" class="label-text">Card Number</label>
+                    <input type="number" name="card-number" id="card-number">
+                    <p class="error-text"></p>
+                </div>
+            </div>
+
+            <div class="form-row-container">
+                <div class="label-input-container">
+                    <label for="expiry-year" class="label-text">Card Expiry (Year)</label>
+                    <input type="number" name="expiry-year" id="expiry-year">
+                    <p class="error-text"></p>
+                </div>
+                <div class="label-input-container">
+                    <label for="cvv-number" class="label-text">CVV</label>
+                    <input type="number" name="cvv-number" id="cvv-number">
+                    <p class="error-text"></p>
+                </div>
+            </div>
+
+            <button class="form-submit-button" type="submit">COMPLETE PAYMENT</button>
+
+        </form>
+    </main>
+    <!-- Main section ending -->
+     <script src="../src/scripts/index.js"></script>
+</body>
+</html>

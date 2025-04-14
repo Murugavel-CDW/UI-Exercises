@@ -1,0 +1,146 @@
+/* Global variables */
+
+:root{
+    --body-background: #f5f5f5;
+    --white: #fff;
+    --button-background: #001b71;
+    --input-background: #fefefe;
+    --dense-blue: #001c72;
+    --grey: #cccccc;
+    --red: #a80001;
+    --black: #000;
+}
+
+/* Resetting default styles */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Webkit styles to remove arrows in number input */
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+/* Body styles for font */
+
+body{
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: var(--body-background);
+}
+
+/* Header section beginning */
+
+/* .header{
+} */
+
+.logo{
+    width: 17rem;
+    height: 17rem;
+    position: absolute;
+    top: -71.5px;
+}
+
+/* Header section ending */
+
+/* Main section beginning */
+
+.main{
+    margin-top: 8.05rem;
+    padding-right: 0.23rem;
+}
+
+/* Form beginning */
+
+.input-form{
+    width: 38.89rem;
+    background-color: var(--white);
+    padding: 2.28rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.form-group-header{
+    color: var(--dense-blue);
+    font-size: 1.08rem;
+    font-weight: 500;
+    letter-spacing: 0.9px;
+    margin-top: 0.2rem;
+    margin-bottom: 1.98rem;
+}
+
+.form-group-header:last-of-type{
+    margin-top: 2rem;
+    margin-bottom: 1.4rem;
+}
+
+.form-row-container{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1.15rem;
+}
+
+.label-input-container{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.2rem;
+}
+
+.label-text{
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+input{
+    background-color: var(--input-background);
+    height: 2.8rem;
+    border: 1px solid var(--grey);
+    border-radius: 4px;
+    font-size: 1.2rem;
+    padding: 0 0.7rem;
+}
+
+.highlight-red{
+    border-color: var(--red);
+}
+
+.form-submit-button{
+    border-radius: 4px;
+    background-color: var(--button-background);
+    color: var(--white);
+    width: 100%;
+    height: 2.85rem;
+    border: none;
+}
+
+.error-text{
+    color: var(--red);
+    font-size: 0.7rem;
+    font-weight: 350;
+    padding-top: 0.1rem;
+}
+
+/* Form ending */
+
+/* Main section ending */
+
+/* Pseudo class styles */
+
+input:focus{
+    outline: none;
+}
+
+.form-submit-button:hover{
+    cursor: pointer;
+}
