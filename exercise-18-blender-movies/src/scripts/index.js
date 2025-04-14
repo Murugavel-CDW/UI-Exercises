@@ -5,17 +5,17 @@ const { videoUrl, title, description, comments } = movieData; // destructuring d
 
 // Function to create and return a comment element
 const createCommentListElement = (commentData) => {
-    const listItem = $("<li></li>").addClass("comments-section-list-item");
-    const imageContainer = $("<div></div>").addClass("commentator-image-container");
+    const listItem = $("<li>").addClass("comments-section-list-item");
+    const imageContainer = $("<div>").addClass("commentator-image-container");
     const imageElement = $("<img/>").attr({
         src: `../src/assets/${commentData.image}`,
         alt: `${commentData.name} image`,
         class: "commentator-image"
     });
     imageContainer.append(imageElement);
-    const commentContainer = $("<div></div>").addClass("comment-info-container");
-    const commentName = $("<h3></h3>").addClass("commentator-name fw-600").text(commentData.name);
-    const commentText = $("<p></p>").addClass("comment-text fw-300").text(commentData.comment);
+    const commentContainer = $("<div>").addClass("comment-info-container");
+    const commentName = $("<h3>").addClass("commentator-name fw-600").text(commentData.name);
+    const commentText = $("<p>").addClass("comment-text fw-300").text(commentData.comment);
     commentContainer.append(commentName, commentText);
     listItem.append(imageContainer, commentContainer);
     return listItem[0];
@@ -23,7 +23,7 @@ const createCommentListElement = (commentData) => {
 
 // Function to create and return a movie element
 const createMovieListElement = (posterData) => {
-    const movieContainer = $("<div></div>").addClass("movie-list-image-container");
+    const movieContainer = $("<div>").addClass("movie-list-image-container");
     const movieImage = $("<img/>").attr({
         src: posterData.imageUrl,
         alt: posterData.title,
