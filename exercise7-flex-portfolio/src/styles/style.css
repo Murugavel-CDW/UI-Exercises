@@ -31,22 +31,19 @@ body{
 .highlight-green{
     color: var(--green);
 }
-/* Main section beginning */
 
-.main{
-    margin: 4.2rem 9.5rem 17.4rem 9.5rem;
+/* Common styles */
+
+img{
+    width: 100%;
+    height: 100%;
 }
 
-.email-desktop{
-    align-self: flex-end;
-    font-size: 1.76rem;
-    margin-bottom: 7.59rem;
-    padding-right: 1.66rem;
-    font-weight: 600;
-}
+/* Header section beginning */
 
-.profile-info{
+.header{
     display: flex;
+    padding-top: 4.2rem;
     flex-direction: column;
     align-items: center;
 }
@@ -71,12 +68,23 @@ body{
     color: var(--greyish-white);
     font-weight: 500;
     letter-spacing: 2.5px;
-    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.email-desktop{
+    align-self: flex-end;
+    font-size: 1.76rem;
+    margin-bottom: 7.59rem;
+    font-weight: 600;
 }
 
 .email-mobile{
-    visibility: hidden;
+    display: none;
 }
+
+/* Header section ending */
+
+/* Main section beginning */
 
 /* Product card beginning */
 
@@ -84,25 +92,18 @@ body{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 8.75rem 0 8.96rem 0.1rem;
-    gap: 1.95rem 2.18rem;
+    padding: 9.84rem 0 8.96rem;
+    gap: 1.95rem 2.21rem;
 }
 
 .product-list-item-container{
     width: 27.08rem;
 }
 
-.product-list-item{
-    width: 100%;
-}
-
 /* Product card ending */
 
 .logos-section{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    row-gap: 5.55rem;
+    text-align: center;
 }
 
 .logos-section-header{
@@ -113,18 +114,16 @@ body{
 }
 
 .logos-section-list{
-    width: 100%; 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     gap: 1.7rem;
-    margin: 0.5rem 0;
+    padding: 6rem 0 15rem;
 }
 
 .logos-section-list-container{
     width: 9.9rem;
-    /* height: 5.4rem; */
 }
 
 .logos-section-list-spotify-image-container{
@@ -152,8 +151,6 @@ body{
 }
 
 .logos-section-list-image{
-    width: 100%;
-    height: 100%;
     object-fit: contain;
 }
 
@@ -181,19 +178,14 @@ body{
 /* Footer section beginning */
 
 .footer{
-    margin-top: 6.45rem;
-    margin-bottom: 9.8rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 6.45rem 0 9.8rem;
+    text-align: center;
 }
 
 .footer-social-list{
     display: flex;
-    width: 100%;
     justify-content: center;
-    margin-top: 0.7rem;
-    margin-bottom: 5.5rem;
+    margin: 0.7rem 0 5.5rem;
     gap: 0.59rem 1.2rem;
 }
 
@@ -221,29 +213,22 @@ body{
 
  /* Media Queries */
 
- @media (max-width: 1325px){
-    .profile-info-name{
-        font-size: 7rem;
-        font-weight: 250;
+ @media (min-width: 1325px){
+    body > * {
+        width: 85.8rem;
+        margin: auto;
     }
  }
 
  @media (max-width: 1024px){
-    .main, .footer{
-        margin: 0;   
-    }
+    /* Header section beginning */
 
-    /* Main section beginning */
-
-    .main{
-        margin-top: 7.2rem;
-        margin-bottom: 9.6rem;
+    .header{
+        padding-top: 17rem;
     }
-    
-    /* Profile section beginning */
 
     .email-desktop{
-        visibility: hidden;
+        display: none;
     }
 
     .profile-info-name{
@@ -254,7 +239,7 @@ body{
     .profile-info-tech{
         font-size: 2.4rem;
         letter-spacing: 0;
-        margin-top: 1.25rem;
+        margin-top: 0.7rem;
     }
 
     .shrink{
@@ -266,28 +251,26 @@ body{
     }
 
     .email-mobile{
-        visibility: visible;
+        display: block;
         font-size: 1.2rem;
-        margin-top: 0.75rem;
+        padding-top: 0.75rem;
         letter-spacing: 0.6px;
         font-weight: 600;
         color: var(--greyish-white);
     }
 
-    /* Profile section ending */
+    /* Header section ending */
 
-    /* Product list section beginning */
+    /* Main section beginning */
 
     .product-list{
-        margin: 7.6rem 0 5.5rem;
-        row-gap: 1.1rem;
+        padding: 7.45rem 0 5.6rem;
+        row-gap: 1.5rem;
     }
 
     .product-list-item-container{
-        margin: 0 1.4rem;
+        width: 26.8rem;
     }
-
-    /* Product list section ending */
 
     /* Logos section beginning */
 
@@ -301,9 +284,8 @@ body{
 
     .logos-section-list{
         justify-content: center;
-        margin: 3.4rem 0;
-        column-gap: 6rem;
-        row-gap: 6rem;
+        padding: 5.5rem 0 13rem;
+        gap: 6rem;
     }
 
     .logos-section-list-container{
@@ -340,20 +322,18 @@ body{
 
     .header-footer-divider-small{
         width: 1.55rem;
+        margin-left: 0.1rem;
         margin-right: 1.6rem;
     }
 
     .header-footer-divider-large{
-        width: 9.55rem;
-        margin-right: 0.2rem;
+        width: 9.5rem;
     }
 
     /* Footer section beginning */
 
     .footer{
-        margin: 2.95rem 1.2rem 3.7rem 1.2rem;
-        margin-top: 2.95rem;
-        margin-bottom: 3.7rem;
+        padding: 2.9rem 0 3.6rem;
     }
 
     .footer-social-list{
