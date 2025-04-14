@@ -1,0 +1,360 @@
+/* Global variables */
+
+:root{
+    --black: #000;
+    --white: #fff;
+    --greyish-white: #cecece;
+    --blue: #4b90e2;
+    --green: #b8e986;
+}
+
+/* Resetting default styles */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Font styles */
+
+body{
+    font-family: "Roboto Condensed", sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.highlight-blue{
+    color: var(--blue);
+}
+
+.highlight-green{
+    color: var(--green);
+}
+
+/* Common styles */
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Header section beginning */
+
+.header{
+    display: flex;
+    padding-top: 4.2rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-info-name{
+    font-size: 11.1rem;
+    font-weight: 300;
+    word-spacing: -0.4rem;
+}
+
+.extra-bold{
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.shrink{
+    letter-spacing: -2px;
+}
+
+.profile-info-tech{
+    font-size: 3.3rem;
+    color: var(--greyish-white);
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    padding-top: 0.5rem;
+}
+
+.email-desktop{
+    align-self: flex-end;
+    font-size: 1.76rem;
+    margin-bottom: 7.59rem;
+    font-weight: 600;
+}
+
+.email-mobile{
+    display: none;
+}
+
+/* Header section ending */
+
+/* Main section beginning */
+
+/* Product card beginning */
+
+.product-list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 9.84rem 0 8.96rem;
+    gap: 1.95rem 2.21rem;
+}
+
+.product-list-item-container{
+    width: 27.08rem;
+}
+
+/* Product card ending */
+
+.logos-section{
+    text-align: center;
+}
+
+.logos-section-header{
+    font-weight: 500;
+    font-size: 3.5rem;
+    color: var(--greyish-white);
+    letter-spacing: -0.08rem;
+}
+
+.logos-section-list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.7rem;
+    padding: 6rem 0 15rem;
+}
+
+.logos-section-list-container{
+    width: 9.9rem;
+}
+
+.logos-section-list-spotify-image-container{
+    height: 2.78rem;
+}
+
+.logos-section-list-adidas-image-container{
+    height: 5.4rem;
+}
+
+.logos-section-list-audi-image-container{
+    height: 2.8rem;
+}
+
+.logos-section-list-lufthansa-image-container{
+    height: 1.86rem;
+}
+
+.logos-section-list-ikea-image-container{
+    height: 3.09rem;
+}
+
+.logos-section-list-montblanc-image-container{
+    height: 4.25rem;
+}
+
+.logos-section-list-image{
+    object-fit: contain;
+}
+
+/* Main section ending */
+
+.header-footer-divider-container{
+    display: flex;
+    justify-content: center;
+}
+
+.header-footer-divider-container > div{
+    border: 0.9px solid var(--white);
+}
+
+.header-footer-divider-small{
+    width: 2.17rem;
+    margin-left: 0.4rem;
+    margin-right: 2.34rem;
+}
+
+.header-footer-divider-large{
+    width: 14rem;
+}
+
+/* Footer section beginning */
+
+.footer{
+    padding: 6.45rem 0 9.8rem;
+    text-align: center;
+}
+
+.footer-social-list{
+    display: flex;
+    justify-content: center;
+    margin: 0.7rem 0 5.5rem;
+    gap: 0.59rem 1.2rem;
+}
+
+.footer-social-icon-container{
+    width: 3.22rem;
+    height: 3.22rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    border: 1.2px solid var(--white);
+}
+
+.footer-social-icon{
+    font-size: 2rem;
+}
+
+.footer-text{
+    font-size: 1.36rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    word-spacing: 0.15rem;
+}
+
+ /* Footer section ending */
+
+ /* Media Queries */
+
+ @media (min-width: 1325px){
+    body > * {
+        width: 85.8rem;
+        margin: auto;
+    }
+ }
+
+ @media (max-width: 1024px){
+    /* Header section beginning */
+
+    .header{
+        padding-top: 17rem;
+    }
+
+    .email-desktop{
+        display: none;
+    }
+
+    .profile-info-name{
+        font-size: 3.74rem;
+        letter-spacing: 3px;
+    }
+
+    .profile-info-tech{
+        font-size: 2.4rem;
+        letter-spacing: 0;
+        margin-top: 0.7rem;
+    }
+
+    .shrink{
+        all: unset;
+    }
+
+    .extra-bold{
+        letter-spacing: 2px;
+    }
+
+    .email-mobile{
+        display: block;
+        font-size: 1.2rem;
+        padding-top: 0.75rem;
+        letter-spacing: 0.6px;
+        font-weight: 600;
+        color: var(--greyish-white);
+    }
+
+    /* Header section ending */
+
+    /* Main section beginning */
+
+    .product-list{
+        padding: 7.45rem 0 5.6rem;
+        row-gap: 1.5rem;
+    }
+
+    .product-list-item-container{
+        width: 26.8rem;
+    }
+
+    /* Logos section beginning */
+
+    .logos-section{
+        row-gap: 2rem;
+    }
+
+    .logos-section-header{
+        font-size: 2.63rem;
+    }
+
+    .logos-section-list{
+        justify-content: center;
+        padding: 5.5rem 0 13rem;
+        gap: 6rem;
+    }
+
+    .logos-section-list-container{
+        width: 8.78rem;
+    }
+
+    .logos-section-list-spotify-image-container{
+        height: 2.2rem;
+    }
+    
+    .logos-section-list-adidas-image-container{
+        height: 4.1rem;
+    }
+    
+    .logos-section-list-audi-image-container{
+        height: 2.4rem;
+    }
+    
+    .logos-section-list-lufthansa-image-container{
+        height: 1.8rem;
+    }
+    
+    .logos-section-list-ikea-image-container{
+        height: 2.63rem;
+    }
+    
+    .logos-section-list-montblanc-image-container{
+        height: 3.85rem;
+    }
+
+    /* Logos section ending */
+
+    /* Main section ending */
+
+    .header-footer-divider-small{
+        width: 1.55rem;
+        margin-left: 0.1rem;
+        margin-right: 1.6rem;
+    }
+
+    .header-footer-divider-large{
+        width: 9.5rem;
+    }
+
+    /* Footer section beginning */
+
+    .footer{
+        padding: 2.9rem 0 3.6rem;
+    }
+
+    .footer-social-list{
+        margin-bottom: 4.45rem;
+        column-gap: 1.575rem;
+    }
+
+    .footer-social-icon-container{
+        width: 3.95rem;
+        height: 3.95rem;
+    }
+
+    .footer-social-icon{
+        font-size: 2.2rem;
+    }
+
+    .footer-text{
+        font-size: 1.67rem;
+        letter-spacing: 1.5px;
+        word-spacing: unset;
+    }
+
+    /* Footer section ending */
+ }
