@@ -3,79 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Real Background Car Animation</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body, html {
-      height: 100%;
-      overflow: hidden;
-    }
-
-    .scene {
-      position: relative;
-      width: 100vw;
-      height: 100vh;
-      background: url('https://i.imgur.com/QZD07Tz.jpg') no-repeat center center/cover;
-    }
-
-    .cloud {
-      position: absolute;
-      width: 120px;
-      animation: floatCloud 60s linear infinite;
-      opacity: 0.8;
-    }
-
-    .cloud img {
-      width: 100%;
-    }
-
-    @keyframes floatCloud {
-      from { left: -200px; }
-      to { left: 110%; }
-    }
-
-    .car {
-      position: absolute;
-      bottom: 60px;
-      height: 60px;
-      animation: drive 10s linear infinite;
-      z-index: 10;
-    }
-
-    .car img {
-      height: 100%;
-    }
-
-    @keyframes drive {
-      from { left: -150px; }
-      to { left: 110%; }
-    }
-  </style>
+  <link rel="stylesheet" href="../src/styles/style.css">
+  <title>CSS Animation</title>
 </head>
 <body>
-  <div class="scene">
-
-    <!-- Clouds -->
-    <div class="cloud" style="top: 80px; animation-delay: 0s;">
-      <img src="https://i.imgur.com/w1UR9Ra.png" alt="cloud" />
-    </div>
-    <div class="cloud" style="top: 130px; animation-delay: 20s;">
-      <img src="https://i.imgur.com/w1UR9Ra.png" alt="cloud" />
-    </div>
-
-    <!-- Cars -->
-    <div class="car" style="animation-delay: 0s;">
-      <img src="https://i.imgur.com/bhEv2wN.png" alt="red car" />
-    </div>
-    <div class="car" style="animation-delay: 5s;">
-      <img src="https://i.imgur.com/NMqqCMy.png" alt="blue car" />
-    </div>
-
+  <div class="background-scenario">
+    <div class="cloud-container cloud1"></div>
+    <div class="cloud-container cloud2"></div>
+    <div class="cloud-container cloud1"></div>
+    <div class="cloud-container cloud1"></div>
+    <div class="cloud-container cloud2"></div>
+    <div class="car-container car1"></div>
+    <div class="car-container car2"></div>
+    <div class="car-container car3"></div>
+    <div class="car-container car4"></div>
   </div>
 </body>
 </html>
