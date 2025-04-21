@@ -1,0 +1,114 @@
+// Mixins
+
+@mixin flex ($justifyType, $alignType, $wrap){
+    display: flex;
+    justify-content: $justifyType;
+    align-items: $alignType;
+    flex-wrap: $wrap;
+}
+
+//  Product card beginning
+
+.product-list{
+    @include flex(center, stretch, wrap);
+    padding: 9.84rem 0 8.96rem;
+    gap: 1.95rem 2.21rem;
+    .product-list-item-container{
+        width: 27.08rem;
+    }
+}
+
+// Product card ending
+
+// Logos section beginning
+
+.logos-section{
+    text-align: center;
+    .logos-section-header{
+        font-weight: 500;
+        font-size: 3.5rem;
+        color: $greyish-white;
+        letter-spacing: -0.08rem;
+    };
+    .logos-section-list{
+        @include flex(space-around, center, wrap);
+        gap: 1.7rem;
+        padding: 6rem 0 15rem;
+        .logos-section-list-container{
+            width: 9.9rem;
+            .logos-section-list-image{
+                object-fit: contain;
+            }
+        };
+        .logos-section-list-spotify-image-container{
+            height: 2.78rem;
+        };
+        .logos-section-list-adidas-image-container{
+            height: 5.4rem;
+        };
+        .logos-section-list-audi-image-container{
+            height: 2.8rem;
+        };
+        .logos-section-list-lufthansa-image-container{
+            height: 1.86rem;
+        };
+        .logos-section-list-ikea-image-container{
+            height: 3.09rem;
+        };
+        .logos-section-list-montblanc-image-container{
+            height: 4.25rem;
+        };
+    }
+}
+
+// Logos section ending
+
+// Media Queries
+
+@media (max-width: 1024px){
+    .product-list{
+        padding: 7.45rem 0 5.6rem;
+        row-gap: 1.5rem;
+        .product-list-item-container{
+            width: 26.8rem;
+        }
+    }
+
+    // Logos section beginning
+
+    .logos-section{
+        row-gap: 2rem;
+        .logos-section-header{
+            font-size: 2.63rem;
+        }
+    
+        .logos-section-list{
+            justify-content: center;
+            padding: 5.5rem 0 13rem;
+            gap: 6rem;
+            .logos-section-list-container{
+                width: 8.78rem;
+            };
+            .logos-section-list-spotify-image-container{
+                height: 2.2rem;
+            };
+            .logos-section-list-adidas-image-container{
+                height: 4.1rem;
+            };
+            .logos-section-list-audi-image-container{
+                height: 2.4rem;
+            };
+            .logos-section-list-lufthansa-image-container{
+                height: 1.8rem;
+            };
+            .logos-section-list-ikea-image-container{
+                height: 2.63rem;
+            };
+            .logos-section-list-montblanc-image-container{
+                height: 3.85rem;
+            }
+        }
+    }
+    
+    // Logos section ending
+}
