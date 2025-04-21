@@ -11,3 +11,197 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.cloud1{
+    height: 6.2rem;
+    width: 9.7rem;
+    background-image: url('../assets/cloud1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    left: -10%;
+}
+
+.cloud2{
+    height: 8rem;
+    width: 9.5rem;
+    background-image: url('../assets/cloud2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    left: -10%;
+}
+
+.horizontal{
+    animation: moveHorizontal linear infinite;
+
+}
+
+#cloud1{
+    animation-duration: 16s;
+}
+
+#cloud2{
+    top: 20px;
+    animation-delay: 2s;
+    animation-duration: 14s;
+}
+
+#cloud3{
+    top: 5px;
+    animation-delay: 2.7s;
+    animation-duration: 15.5s;
+}
+
+#cloud4{
+    top: 30px;
+    animation-delay: 10s;
+    animation-duration: 15s;
+}
+
+#cloud5{
+    top: 23px;
+    animation-delay: 7s;
+    animation-duration: 17s;
+}
+
+#cloud6{
+    top: -25px;
+    animation-delay: 5s;
+    animation-duration: 19s;
+}
+
+#cloud7{
+    top: 50px;
+    animation-delay: 9s;
+    animation-duration: 20s;
+}
+
+#cloud8{
+    top: 20px;
+    animation-delay: 13s;
+    animation-duration: 18s;
+}
+
+#cloud9{
+    top: 20px;
+    animation-delay: 16s;
+    animation-duration: 15s;
+}
+
+#cloud10{
+    top: 20px;
+    animation-delay: 20s;
+    animation-duration: 16s;
+}
+
+div > img{
+    width: 100%;
+    height: 100%;
+}
+
+.tyre{
+    animation: rotate 2s linear infinite;
+}
+
+.tyre-reverse{
+    animation: rotate-reverse 1.4s linear infinite;
+}
+
+[class^="car"] > div{
+    position: absolute;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+}
+
+.car1{
+    height: 20rem;
+    width: 28rem;
+    position: absolute;
+    bottom: -25px;
+    z-index: 1;
+    animation: car1 10s linear infinite both;
+}
+
+.car1-tyre-1{
+    background: url('../assets/car1-tyre.png');
+    background-size: contain;
+    bottom: 37px;
+    left: 65px;
+}
+
+.car1-tyre-2{
+    background: url('../assets/car1-tyre.png');
+    background-size: contain;
+    bottom: 38px;
+    left: 291px;
+}
+
+.car4{
+    height: 11rem;
+    width: 18rem;
+    position: absolute;
+    bottom: 125px;
+    animation: car4 10s linear 2s infinite both;
+}
+
+.car4-tyre-1{
+    bottom: -4px;
+    left: 8px;
+}
+
+.car4-tyre-2{
+    bottom: -3px;
+    right: 9px;
+}
+
+@keyframes moveHorizontal {
+    from{
+        left: -10%;
+    }
+
+    to{
+        left: 110%;
+    }
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes rotate-reverse {
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes car1 {
+    from{
+        right: -50%;
+    }
+
+    to{
+        right: 110%;
+    }
+}
+
+@keyframes car4 {
+    from{
+        left: -50%;
+    }
+
+    to{
+        left: 110%;
+    }
+}
