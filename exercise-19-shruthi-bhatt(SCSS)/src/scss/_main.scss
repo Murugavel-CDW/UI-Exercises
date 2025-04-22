@@ -13,6 +13,7 @@
     @include flex(center, stretch, wrap);
     padding: 9.84rem 0 8.96rem;
     gap: 1.95rem 2.21rem;
+
     .product-list-item-container{
         width: 27.08rem;
     }
@@ -24,12 +25,14 @@
 
 .logos-section{
     text-align: center;
+
     .logos-section-header{
         font-weight: 500;
         font-size: 3.5rem;
-        color: $greyish-white;
+        color: $email-text;
         letter-spacing: -0.08rem;
     };
+
     .logos-section-list{
         @include flex(space-around, center, wrap);
         gap: 1.7rem;
@@ -40,21 +43,27 @@
                 object-fit: contain;
             }
         };
+
         .logos-section-list-spotify-image-container{
             height: 2.78rem;
         };
+
         .logos-section-list-adidas-image-container{
             height: 5.4rem;
         };
+
         .logos-section-list-audi-image-container{
             height: 2.8rem;
         };
+        
         .logos-section-list-lufthansa-image-container{
             height: 1.86rem;
         };
+
         .logos-section-list-ikea-image-container{
             height: 3.09rem;
         };
+
         .logos-section-list-montblanc-image-container{
             height: 4.25rem;
         };
@@ -69,6 +78,7 @@
     .product-list{
         padding: 7.45rem 0 5.6rem;
         row-gap: 1.5rem;
+
         .product-list-item-container{
             width: 26.8rem;
         }
@@ -89,21 +99,27 @@
             .logos-section-list-container{
                 width: 8.78rem;
             };
+
             .logos-section-list-spotify-image-container{
                 height: 2.2rem;
             };
+
             .logos-section-list-adidas-image-container{
                 height: 4.1rem;
             };
+
             .logos-section-list-audi-image-container{
                 height: 2.4rem;
             };
+
             .logos-section-list-lufthansa-image-container{
                 height: 1.8rem;
             };
+
             .logos-section-list-ikea-image-container{
                 height: 2.63rem;
             };
+
             .logos-section-list-montblanc-image-container{
                 height: 3.85rem;
             }

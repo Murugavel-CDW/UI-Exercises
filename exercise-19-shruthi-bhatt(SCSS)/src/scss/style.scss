@@ -21,16 +21,16 @@
 
 body{
     font-family: "Roboto Condensed", sans-serif;
-    background-color: $black;
-    color: $white;
+    background-color: $primary-color;
+    color: $secondary-color;
 }
 
 .highlight-blue{
-    @include highlightText($blue);
+    @include highlightText($highlight-name);
 }
 
 .highlight-green{
-    @include highlightText($green);
+    @include highlightText($highlight-logo);
 }
 
 // Common styles
@@ -44,13 +44,15 @@ img{
     display: flex;
     justify-content: center;
     & > div{
-        border: 0.9px solid $white;
+        border: 0.9px solid $secondary-color;
     };
+
     .header-footer-divider-small{
         width: 2.17rem;
         margin-left: 0.4rem;
         margin-right: 2.34rem;
     };
+
     .header-footer-divider-large{
         width: 14rem;
     }
@@ -75,4 +77,4 @@ img{
     .header-footer-divider-large{
         width: 9.5rem;
     }
- }
+ } 
